@@ -1,0 +1,46 @@
+/* line 3, ../sass/style.scss */
+#primero {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 6, ../sass/style.scss */
+#primero .destacado {
+  display: block;
+  color: #FF8000;
+  text-align: center;
+  font-size: 1.6rem;
+  padding: 6px;
+  margin-bottom: 0px;
+}
+/* line 14, ../sass/style.scss */
+#primero p {
+  display: inline;
+}
+
+/* line 18, ../sass/style.scss */
+#segundo {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 5rem;
+}
+/* line 22, ../sass/style.scss */
+#segundo .destacado {
+  color: #2E5F64;
+  font-size: 1.4rem;
+  text-decoration: underline;
+  padding: 5px;
+  margin-bottom: 0px;
+}
+/* line 29, ../sass/style.scss */
+#segundo p:not(.destacado)::first-line {
+  font-style: italic;
+}
+/* line 32, ../sass/style.scss */
+#segundo p {
+  margin-top: 0px;
+}
+/* line 36, ../sass/style.scss */
+#segundo #parrafos p {
+  text-align: right;
+  margin: 0px;
+}

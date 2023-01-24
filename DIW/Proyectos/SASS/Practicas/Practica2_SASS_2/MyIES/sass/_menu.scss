@@ -1,0 +1,88 @@
+@import "mixin";
+@keyframes iluminar {
+    from {
+        background-color: #666;
+        color: #eee;
+    }
+    to {
+        background-color: #888;
+        color: #fff;
+    }
+}
+body {
+    margin: 0px;
+    padding: 0px;
+}
+header {
+    padding: 12px 30px 12px 30px;
+    font-size: 1.8em;
+    background-color: #eee; //$backgroundColor;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #aaa;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+li {
+    &.categoria {
+        float: left;
+        > a {
+            @include transition(padding, 0.5s, ease-out);
+        }
+        a:hover {
+            padding: 10px 20px 10px 20px;
+        }
+    }
+    &.categoria:hover {
+        ul {
+            height: 100px;
+        }
+    }
+}
+nav {
+    position: absolute;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    ul {
+        list-style-type: none;
+        padding: 0px;
+        margin: 0px;
+    }
+    > ul {
+        width: 100%;
+        top: 32px;
+        color: #eee;
+        background-color: #666;
+    }
+    a {
+        color: $textColor;
+        background-color: $backgroundColor;
+        text-decoration: none;
+        width: 160px;
+        padding-top: 7px;
+        padding-right: 20px;
+        display: block;
+        text-align: center;
+        cursor: pointer;
+    }
+    a:hover {
+        color: $textColorHover;
+        background-color: $backgroundColorHover;
+        @include animation(iluminar, 0.4s);
+    }
+}
+ul{
+    &.submenu {
+        @include transition(height, 0.5s);
+        position: absolute;
+        height: 0px;
+        overflow: hidden;
+    }
+}
+footer {
+    color: $textColor;
+    background-color: $backgroundColor;
+    @include box-sizing(border-box);
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    padding: 5px;
+}

@@ -1,0 +1,54 @@
+$theme: dark;
+$textColor: #eee;
+$backgroundColor: #15a;
+$titleColor: darken($backgroundColor,10%);
+
+@if $theme == dark{
+    $backgroundColor: #138;
+}@else if $theme == light{
+    $backgroundColor: #ddf;
+    $textColor: #138;
+}
+
+$textColorHover: lighten($textColor,10%);
+$backgroundColorHover: lighten($backgroundColor,10%);
+
+
+@import "mixin";
+@import "menu";
+@import "contenido";
+
+@keyframes iluminar {
+    from {
+        background-color: $backgroundColor;
+        color: $textColor;
+    }
+    to {
+        background-color: $backgroundColorHover;
+        color: $textColorHover;
+    }
+}
+
+body{
+    padding: 0px;
+    margin: 0px;
+}
+
+header{
+    background-color: $backgroundColor;
+    color: $textColor;
+    padding: 12px 30px;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #aaa;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+footer{
+    @include color-textBackground;
+    @include box-sizing(border-box);
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    padding: 5px;
+}

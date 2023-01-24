@@ -1,0 +1,29 @@
+@mixin color-textBackground {
+    color: $textColor;
+    background-color: $backgroundColor;
+}
+@mixin colorHover-textBackground {
+    color: $textColorHover;
+    background-color: $backgroundColorHover;
+}
+@mixin box-sizing($value) {
+    -moz-box-sizing: $value;
+    -webkit-box-sizing: $value;
+    box-sizing: $value;
+}
+@mixin transition($property,$delay,$timing: linear) {
+    transition-property: $property;
+    transition-timing-function: $timing;
+    transition-delay: $delay;
+    -webkit-tansition-property: $property;
+    -webkit-transition-timing-function: $timing;
+    -webkit-transition-delay: $delay;
+    -moz-tansition-property: $property;
+    -moz-transition-timing-function: $timing;
+    -moz-transition-delay: $delay;
+}
+@mixin animation($name,$duration,$timing : linear) {
+    -moz-animation: $name $duration $timing;
+    -webkit-animation: $name $duration $timing;
+    animation: $name $duration $timing;
+}

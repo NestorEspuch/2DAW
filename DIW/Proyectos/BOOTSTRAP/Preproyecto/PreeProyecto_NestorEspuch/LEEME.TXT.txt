@@ -1,0 +1,2 @@
+En el fichero index.html hay anotaciones y comentarios para ser mas llevadero 
+el trabajo de las tareas de Fluid Layout y de Boostrap

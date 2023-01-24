@@ -1,0 +1,225 @@
+/* line 1, ../sass/_menu.scss */
+nav {
+  position: absolute;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* line 6, ../sass/_menu.scss */
+nav ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+/* line 12, ../sass/_menu.scss */
+nav > ul {
+  width: 100%;
+  height: 32px;
+  color: #eee;
+  background-color: #15a;
+}
+/* line 19, ../sass/_menu.scss */
+nav li.categoria {
+  float: left;
+}
+/* line 21, ../sass/_menu.scss */
+nav li.categoria > a {
+  transition: padding 0.4s ease-out;
+  -webkit-transition: padding 0.4s ease-out;
+  -moz-transition: padding 0.4s ease-out;
+}
+/* line 26, ../sass/_menu.scss */
+nav li.categoria:hover ul.submenu {
+  height: 100px;
+}
+/* line 31, ../sass/_menu.scss */
+nav li.categoria ul.submenu {
+  transition: height 0.5s ease-out;
+  -webkit-transition: height 0.5s ease-out;
+  -moz-transition: height 0.5s ease-out;
+  position: absolute;
+  height: 0px;
+  overflow: hidden;
+}
+/* line 41, ../sass/_menu.scss */
+nav:hover li.categoria > a:hover {
+  padding: 10px 20px;
+}
+/* line 47, ../sass/_menu.scss */
+nav a {
+  color: #eee;
+  background-color: #15a;
+  text-decoration: none;
+  width: 160px;
+  padding: 7px 20px;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+}
+/* line 57, ../sass/_menu.scss */
+nav a:hover {
+  color: white;
+  background-color: #166cd8;
+  -moz-animation: iluminar 0.4s linear;
+  -webkit-animation: iluminar 0.4s linear;
+  animation: iluminar 0.4s linear;
+}
+
+@media (max-width: 1024px) {
+  /* line 66, ../sass/_menu.scss */
+  nav {
+    display: none;
+  }
+}
+/* line 3, ../sass/_contenido.scss */
+#contenido .col-left .login button {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+/* line 12, ../sass/_contenido.scss */
+#contenido .col-left .login input {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 5px;
+  padding: 5px 10px;
+  border: 1px solid #bbb;
+}
+
+/* line 23, ../sass/_contenido.scss */
+.icon-contact {
+  background-position: 0 0;
+  height: 30px;
+  width: 30px;
+}
+
+/* line 23, ../sass/_contenido.scss */
+.icon-menu {
+  background-position: 0 -30px;
+  height: 50px;
+  width: 54px;
+}
+
+/* line 23, ../sass/_contenido.scss */
+.icon-news {
+  background-position: 0 -80px;
+  height: 30px;
+  width: 39px;
+}
+
+/* line 23, ../sass/_contenido.scss */
+.icon-studies {
+  background-position: 0 -110px;
+  height: 30px;
+  width: 44px;
+}
+
+/* line 29, ../sass/_contenido.scss */
+i {
+  background: url('../img/../img-sefcd2497b2.png');
+  display: inline-block;
+}
+
+/* line 34, ../sass/_contenido.scss */
+#contenido {
+  padding: 30px 20px;
+}
+/* line 37, ../sass/_contenido.scss */
+#contenido .col-left {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 30%;
+  float: left;
+  padding: 10px;
+}
+@media (max-width: 800px) {
+  /* line 37, ../sass/_contenido.scss */
+  #contenido .col-left {
+    float: none;
+    width: 100%;
+  }
+}
+/* line 57, ../sass/_contenido.scss */
+#contenido .col-right {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-left: 30%;
+  width: 70%;
+  padding: 10px;
+}
+/* line 63, ../sass/_contenido.scss */
+#contenido .col-right h1 {
+  color: #0c3e7c;
+  font-size: 1.6em;
+}
+@media (max-width: 800px) {
+  /* line 57, ../sass/_contenido.scss */
+  #contenido .col-right {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+/* line 74, ../sass/_contenido.scss */
+#contenido .button-action {
+  background-color: #15a;
+  color: white;
+}
+/* line 78, ../sass/_contenido.scss */
+#contenido .button-action:hover {
+  background-color: #64a2f0;
+}
+@media (max-width: 1024px) {
+  /* line 34, ../sass/_contenido.scss */
+  #contenido {
+    padding: 10px 20px;
+  }
+}
+
+@keyframes iluminar {
+  from {
+    background-color: #15a;
+    color: #eee;
+  }
+  to {
+    background-color: #166cd8;
+    color: white;
+  }
+}
+/* line 22, ../sass/style.scss */
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+/* line 27, ../sass/style.scss */
+header {
+  padding: 12px 30px;
+  color: #444;
+  font-size: 1.8em;
+  background-color: #eee;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #aaa;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* line 37, ../sass/style.scss */
+footer {
+  color: #eee;
+  background-color: #15a;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  padding: 5px;
+}

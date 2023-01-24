@@ -1,0 +1,83 @@
+@import compass
+
+%button-block
+  +box-sizing(border-box)
+
+  width: 100%
+  padding: 5px 10px
+  border-radius: 5px
+  border: 1px solid transparent
+  cursor: pointer
+
+%input-block
+  +box-sizing(border-box)
+
+  width: 100%
+  border-radius: 5px
+  padding: 5px 10px
+  border: 1px solid #bbb
+
+$icons: sprite-map("../img/*.png")
+
+@each $i in sprite-names($icons)
+  .icon-#{$i}
+    background-position: sprite-position($icons, $i)
+
+    +sprite-dimensions($icons, $i)
+
+i
+  background: $icons
+  display: inline-block
+
+#contenido
+  padding: 30px 20px
+
+  .col-left
+    +box-sizing(border-box)
+
+    width: 30%
+    float: left
+    padding: 10px
+
+    .login
+      button
+        @extend %button-block
+
+      input
+        @extend %input-block
+
+    +responsive(small)
+      float: none
+      width: 100%
+
+  .col-right
+    +box-sizing(border-box)
+
+    margin-left: 30%
+    width: 70%
+    padding: 10px
+
+    h1
+      color: $titleColor
+      font-size: 1.6em
+
+    +responsive(small)
+      margin-left: 0
+      width: 100%
+
+  .button-action
+    background-color: $backgroundColor
+    color: white
+
+    @if $theme == light
+      background-color: darken($backgroundColor, 10%)
+      color: $textColor
+    @else if $theme == dark
+      background-color: lighten($backgroundColor, 20%)
+      color: $textColor
+
+    &:hover
+      background-color: lighten($backgroundColorHover, 20%)
+
+  +responsive(medium)
+    padding: 10px 20px

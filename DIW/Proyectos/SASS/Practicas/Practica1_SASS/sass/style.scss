@@ -1,0 +1,41 @@
+$primaryColor: #FF8000;
+$secondaryColor: #2E5F64;
+#primero{
+    padding-left: 20px;
+    padding-right: 20px;
+    .destacado{
+        display: block;
+        color: $primaryColor;
+        text-align: center;
+        font-size: 1.6rem;
+        padding: 6px;
+        margin-bottom: 0px;
+    }
+    p{
+        display: inline;
+    }
+}
+#segundo{
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 5rem;
+    .destacado{
+        color: $secondaryColor;
+        font-size: 1.4rem;
+        text-decoration: underline;
+        padding: 5px;
+        margin-bottom: 0px;
+    }
+    p:not(.destacado)::first-line {
+        font-style: italic;
+    }
+    p{
+        margin-top: 0px;
+    }
+    #parrafos{
+        p{
+            text-align: right;
+            margin: 0px;
+        }
+    }
+}

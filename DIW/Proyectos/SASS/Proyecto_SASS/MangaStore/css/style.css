@@ -1,0 +1,1634 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@-webkit-keyframes rotateIn {
+  0% {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotate3d(0, 0, 1, -200deg);
+    transform: rotate3d(0, 0, 1, -200deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+@keyframes rotateIn {
+  0% {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotate3d(0, 0, 1, -200deg);
+    transform: rotate3d(0, 0, 1, -200deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes rubberBand {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes rubberBand {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+/* line 1, ../sass/_menu.sass */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 15px;
+  height: 6em;
+}
+/* line 12, ../sass/_menu.sass */
+header .logoNombreHeader {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: 2em;
+  margin-bottom: 0.5rem;
+  font-size: 20px;
+}
+/* line 21, ../sass/_menu.sass */
+header .logoNombreHeader img:hover {
+  -webkit-animation-name: rotateIn;
+  animation-name: rotateIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+/* line 25, ../sass/_menu.sass */
+header .logoNombreHeader a .logoHeader {
+  width: 55px;
+  height: 55px;
+  margin-top: 1.4em;
+  margin-right: 0.5rem;
+}
+/* line 32, ../sass/_menu.sass */
+header .logoNombreHeader h1 a {
+  color: #a309cd;
+}
+/* line 35, ../sass/_menu.sass */
+header .menu {
+  height: 45px;
+}
+/* line 38, ../sass/_menu.sass */
+header .menu ul {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+}
+/* line 44, ../sass/_menu.sass */
+header .menu ul.submenu {
+  height: auto;
+  overflow: hidden;
+  width: 170px;
+  background: #060d17;
+  position: absolute;
+  z-index: 99;
+  display: none;
+}
+/* line 53, ../sass/_menu.sass */
+header .menu ul.submenu li {
+  display: block;
+  width: 100%;
+}
+/* line 57, ../sass/_menu.sass */
+header .menu ul.submenu a {
+  color: white;
+}
+/* line 60, ../sass/_menu.sass */
+header .menu ul.submenu a:hover {
+  background: #23282e;
+  color: white;
+}
+/* line 64, ../sass/_menu.sass */
+header .menu li {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  float: left;
+  display: inline;
+  position: relative;
+}
+/* line 72, ../sass/_menu.sass */
+header .menu li:hover ul.submenu {
+  display: block;
+}
+/* line 75, ../sass/_menu.sass */
+header .menu a {
+  display: block;
+  line-height: 45px;
+  margin: 0 0.7em;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+/* line 83, ../sass/_menu.sass */
+header .menu a.dropdown-arrow:after {
+  content: "▾";
+  margin-left: 5px;
+}
+/* line 88, ../sass/_menu.sass */
+header .inputHeader .buscarIndex {
+  background-color: #23282e;
+  width: 25em;
+  height: 2em;
+  border-radius: 15px;
+  border: 0;
+  position: relative;
+  margin-right: 0.5em;
+  color: white;
+}
+/* line 98, ../sass/_menu.sass */
+header .inputHeader .lupaHeader {
+  padding: 0.25em 0.6em;
+  border: 1px solid wheat;
+  text-align: center;
+  box-shadow: 0 2px 3px white;
+  width: 30%;
+}
+/* line 105, ../sass/_menu.sass */
+header .carritoHeader {
+  margin-right: 2em;
+}
+/* line 108, ../sass/_menu.sass */
+header .carritoHeader:hover {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+/* line 111, ../sass/_menu.sass */
+header .carritoHeader .imgCarritoHeader {
+  width: 20px;
+  margin-right: 0.5em;
+}
+/* line 115, ../sass/_menu.sass */
+header .carritoHeader a.textCarrito {
+  font-size: 18px;
+}
+@media screen and (min-width: 1400px) {
+  /* line 119, ../sass/_menu.sass */
+  header .buscarIndex {
+    width: 35em !important;
+  }
+  /* line 122, ../sass/_menu.sass */
+  header .logoNombreHeader {
+    margin-left: 4em;
+  }
+  /* line 126, ../sass/_menu.sass */
+  header .logoNombreHeader a .logoHeader {
+    width: 65px;
+    height: 65px;
+  }
+  /* line 131, ../sass/_menu.sass */
+  header .logoNombreHeader h1 a {
+    font-size: 1.2em !important;
+  }
+  /* line 134, ../sass/_menu.sass */
+  header .carritoHeader {
+    margin-right: 4em;
+  }
+}
+@media screen and (max-width: 1200px) {
+  /* line 139, ../sass/_menu.sass */
+  header .tituloHeader {
+    display: none;
+  }
+  /* line 142, ../sass/_menu.sass */
+  header .buscarIndex {
+    width: 20em !important;
+  }
+  /* line 145, ../sass/_menu.sass */
+  header .logoHeader {
+    margin-top: 0.8em !important;
+  }
+}
+@media screen and (max-width: 1200) {
+  /* line 139, ../sass/_menu.sass */
+  header .tituloHeader {
+    display: none;
+  }
+  /* line 142, ../sass/_menu.sass */
+  header .buscarIndex {
+    width: 20em !important;
+  }
+  /* line 145, ../sass/_menu.sass */
+  header .logoHeader {
+    margin-top: 0.8em !important;
+  }
+}
+@media screen and (max-width: 900px) {
+  /* line 150, ../sass/_menu.sass */
+  header .tituloHeader {
+    display: none;
+  }
+  /* line 153, ../sass/_menu.sass */
+  header .buscarIndex {
+    width: 10em !important;
+  }
+  /* line 156, ../sass/_menu.sass */
+  header .logoHeader {
+    margin-top: 0.8em !important;
+  }
+}
+@media screen and (max-width: 900) {
+  /* line 150, ../sass/_menu.sass */
+  header .tituloHeader {
+    display: none;
+  }
+  /* line 153, ../sass/_menu.sass */
+  header .buscarIndex {
+    width: 10em !important;
+  }
+  /* line 156, ../sass/_menu.sass */
+  header .logoHeader {
+    margin-top: 0.8em !important;
+  }
+}
+@media screen and (max-width: 750px) {
+  /* line 161, ../sass/_menu.sass */
+  header .textCarrito,
+  header .inputHeader,
+  header .tituloHeader {
+    display: none;
+  }
+  /* line 166, ../sass/_menu.sass */
+  header .logoHeader {
+    margin-top: 0.8em !important;
+  }
+}
+@media screen and (max-width: 750) {
+  /* line 161, ../sass/_menu.sass */
+  header .textCarrito,
+  header .inputHeader,
+  header .tituloHeader {
+    display: none;
+  }
+  /* line 166, ../sass/_menu.sass */
+  header .logoHeader {
+    margin-top: 0.8em !important;
+  }
+}
+@media screen and (max-width: 550px) {
+  /* line 171, ../sass/_menu.sass */
+  header .imgCarritoHeader,
+  header .textCarrito,
+  header .tituloHeader,
+  header .inputHeader {
+    display: none;
+  }
+}
+@media screen and (max-width: 550) {
+  /* line 171, ../sass/_menu.sass */
+  header .imgCarritoHeader,
+  header .textCarrito,
+  header .tituloHeader,
+  header .inputHeader {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  /* line 179, ../sass/_menu.sass */
+  header .carritoHeader,
+  header .logoNombreHeader,
+  header .inputHeader {
+    display: none;
+  }
+  /* line 184, ../sass/_menu.sass */
+  header .enlacesNav {
+    margin: 0 0.6em !important;
+    font-size: 1.1em !important;
+  }
+  /* line 188, ../sass/_menu.sass */
+  header .menuPrincipal {
+    margin-left: 1em !important;
+  }
+}
+@media screen and (max-width: 500) {
+  /* line 179, ../sass/_menu.sass */
+  header .carritoHeader,
+  header .logoNombreHeader,
+  header .inputHeader {
+    display: none;
+  }
+  /* line 184, ../sass/_menu.sass */
+  header .enlacesNav {
+    margin: 0 0.6em !important;
+    font-size: 1.1em !important;
+  }
+  /* line 188, ../sass/_menu.sass */
+  header .menuPrincipal {
+    margin-left: 1em !important;
+  }
+}
+
+/* line 1, ../sass/_pie.sass */
+footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+/* line 9, ../sass/_pie.sass */
+.enlacesPie {
+  color: white;
+  display: inline;
+  margin-left: 0.7em;
+}
+
+/* line 14, ../sass/_pie.sass */
+.iconosPie {
+  margin-right: 3em;
+  justify-content: right;
+}
+
+/* line 18, ../sass/_pie.sass */
+.enlacesIconosPie {
+  display: inline;
+  margin-left: 0.7em;
+}
+
+/* line 22, ../sass/_pie.sass */
+.iconoPie {
+  width: 20px;
+}
+
+@media screen and (max-width: 500px) {
+  /* line 26, ../sass/_pie.sass */
+  .enlacesPie {
+    font-size: small;
+  }
+
+  /* line 29, ../sass/_pie.sass */
+  .iconosPie {
+    margin-left: 5.5em;
+    margin-top: 0 !important;
+  }
+}
+@media screen and (max-width: 500) {
+  /* line 26, ../sass/_pie.sass */
+  .enlacesPie {
+    font-size: small;
+  }
+
+  /* line 29, ../sass/_pie.sass */
+  .iconosPie {
+    margin-left: 5.5em;
+    margin-top: 0 !important;
+  }
+}
+@media screen and (max-width: 550px) {
+  /* line 35, ../sass/_pie.sass */
+  .iconosPie {
+    margin-left: 5.7em;
+    margin-top: 0 !important;
+  }
+}
+@media screen and (max-width: 550) {
+  /* line 35, ../sass/_pie.sass */
+  .iconosPie {
+    margin-left: 5.7em;
+    margin-top: 0 !important;
+  }
+}
+/* line 1, ../sass/_contenido.sass */
+#mainIndex {
+  margin-left: 3em;
+  margin-right: 3em;
+  margin-top: 1em;
+  margin-bottom: 3em;
+}
+/* line 7, ../sass/_contenido.sass */
+#mainIndex #filtro {
+  margin-left: 3em;
+}
+/* line 11, ../sass/_contenido.sass */
+#mainIndex #filtro form select {
+  background-color: #060d17;
+  color: white;
+  border: 0;
+  width: 8em;
+}
+/* line 17, ../sass/_contenido.sass */
+#mainIndex #contenido {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+}
+/* line 25, ../sass/_contenido.sass */
+#mainIndex #contenido .manga {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+  width: 8em;
+  height: 11em;
+  margin: 1.5em;
+  border-radius: 10px;
+  box-shadow: 1px 2px 10px #434556;
+  font-weight: bold;
+  background-image: no-repeat;
+  background-image: fixed;
+  background-image: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 26, ../sass/_contenido.sass */
+#mainIndex #contenido .manga:hover {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+/* line 50, ../sass/_contenido.sass */
+#mainIndex #contenido .manga .nuevo {
+  background-color: #cd0909;
+  padding: 0.1em;
+  border-radius: 10px;
+  opacity: 0.8;
+  text-align: center;
+  width: 4em;
+  font-size: small;
+  margin-left: 5.7em;
+  box-shadow: 0 0 10px #cd0909;
+}
+/* line 61, ../sass/_contenido.sass */
+#mainIndex #contenido .manga .precioNombre {
+  display: flex;
+  margin-top: 8em;
+}
+/* line 65, ../sass/_contenido.sass */
+#mainIndex #contenido .manga .precioNombre .precio {
+  background-color: #a309cd;
+  border-radius: 40px;
+  opacity: 0.8;
+  text-align: center;
+  width: 2em;
+  padding: 0.4em;
+  font-size: small;
+  box-shadow: 0 0 10px #a309cd;
+  margin-right: 3px;
+}
+/* line 76, ../sass/_contenido.sass */
+#mainIndex #contenido .manga .precioNombre .nombre {
+  background-color: #a309cd;
+  border-radius: 40px;
+  opacity: 0.8;
+  text-align: center;
+  width: 6em;
+  padding: 0.4em;
+  font-size: small;
+  box-shadow: 0 0 10px #a309cd;
+}
+/* line 86, ../sass/_contenido.sass */
+#mainIndex #contenido #berserk {
+  background-image: url("../img/Mangas/Portada_Bersek.jpg");
+}
+/* line 89, ../sass/_contenido.sass */
+#mainIndex #contenido #bluelock {
+  background-image: url("../img/Mangas/Portada_Bluelock.jpg");
+}
+/* line 92, ../sass/_contenido.sass */
+#mainIndex #contenido #chainsawman {
+  background-image: url("../img/Mangas/Portada_Chainsawman.jpg");
+}
+/* line 95, ../sass/_contenido.sass */
+#mainIndex #contenido #chainsawman .nuevo {
+  opacity: 0;
+}
+/* line 98, ../sass/_contenido.sass */
+#mainIndex #contenido #deathnote {
+  background-image: url("../img/Mangas/Portada_DeathNote.jpg");
+}
+/* line 101, ../sass/_contenido.sass */
+#mainIndex #contenido #deathnote .nuevo {
+  opacity: 0;
+}
+/* line 104, ../sass/_contenido.sass */
+#mainIndex #contenido #dorohedoro {
+  background-image: url("../img/Mangas/Portada_Dorohedoro.jpg");
+}
+/* line 107, ../sass/_contenido.sass */
+#mainIndex #contenido #fireforce {
+  background-image: url("../img/Mangas/Portada_FireForce.jpg");
+}
+/* line 110, ../sass/_contenido.sass */
+#mainIndex #contenido #hxh {
+  background-image: url("../img/Mangas/Portada_HunterxHunter.jpg");
+}
+/* line 113, ../sass/_contenido.sass */
+#mainIndex #contenido #jujutsu {
+  background-image: url("../img/Mangas/Portada_JujutsuKaisen.jpg");
+}
+/* line 116, ../sass/_contenido.sass */
+#mainIndex #contenido #onepiece {
+  background-image: url("../img/Mangas/Portada_Onepiece.jpg");
+}
+/* line 119, ../sass/_contenido.sass */
+#mainIndex #contenido #onepiece .nuevo {
+  opacity: 0;
+}
+/* line 122, ../sass/_contenido.sass */
+#mainIndex #contenido #sololeveling {
+  background-image: url("../img/Mangas/Portada_Sololeveling.jpeg");
+}
+/* line 125, ../sass/_contenido.sass */
+#mainIndex #contenido #sololeveling .nuevo {
+  opacity: 0;
+}
+/* line 128, ../sass/_contenido.sass */
+#mainIndex #contenido #tokyoghoul {
+  background-image: url("../img/Mangas/Portada_TokyoGhoul.jpg");
+}
+/* line 131, ../sass/_contenido.sass */
+#mainIndex #contenido #vagabond {
+  background-image: url("../img/Mangas/Portada_Vagabond.jpg");
+}
+/* line 134, ../sass/_contenido.sass */
+#mainIndex #contenido #vagabond .nuevo {
+  opacity: 0;
+}
+@media screen and (min-width: 1400px) {
+  /* line 138, ../sass/_contenido.sass */
+  #mainIndex .manga {
+    width: 10em !important;
+    height: 14em !important;
+  }
+  /* line 142, ../sass/_contenido.sass */
+  #mainIndex .nuevo {
+    margin-left: 8em !important;
+  }
+  /* line 145, ../sass/_contenido.sass */
+  #mainIndex .precioNombre {
+    margin-top: 11em !important;
+  }
+  /* line 148, ../sass/_contenido.sass */
+  #mainIndex .precioNombre .precio {
+    margin-right: 1em !important;
+    margin-left: 0.8em !important;
+  }
+}
+
+/* line 1, ../sass/_sobrenosotros.sass */
+#mainSobreNosotros {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: unset;
+  align-content: flex-start;
+  color: white;
+  text-align: justify;
+  margin-left: 8em;
+  margin-right: 8em;
+  margin-top: 2em;
+}
+/* line 14, ../sass/_sobrenosotros.sass */
+#mainSobreNosotros #sobreNosotrosIzquierda {
+  order: 0;
+  flex: 0 auto;
+  align-self: auto;
+  height: auto;
+  width: auto;
+}
+/* line 22, ../sass/_sobrenosotros.sass */
+#mainSobreNosotros #sobreNosotrosIzquierda div h1 {
+  text-align: start;
+  margin: 0;
+}
+/* line 26, ../sass/_sobrenosotros.sass */
+#mainSobreNosotros #sobreNosotrosIzquierda div ul {
+  padding: 0;
+  margin-top: 4em;
+}
+/* line 30, ../sass/_sobrenosotros.sass */
+#mainSobreNosotros #sobreNosotrosIzquierda div ul li {
+  list-style: none;
+  font-size: x-small;
+}
+/* line 34, ../sass/_sobrenosotros.sass */
+#mainSobreNosotros #sobreNosotrosDerecha {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  height: auto;
+  width: auto;
+  margin-left: 5em;
+}
+/* line 42, ../sass/_sobrenosotros.sass */
+#mainSobreNosotros #sobreNosotrosDerecha img {
+  width: 20em;
+}
+
+@media screen and (max-width: 1080px) {
+  /* line 46, ../sass/_sobrenosotros.sass */
+  #mainSobreNosotros {
+    flex-wrap: wrap;
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+  /* line 51, ../sass/_sobrenosotros.sass */
+  #mainSobreNosotros #sobreNosotrosDerecha {
+    display: none;
+  }
+}
+/* line 1, ../sass/_descripcion.sass */
+.mainDescripcion {
+  display: flex;
+  color: white;
+  margin-top: 2em;
+  margin-left: 8em;
+  margin-right: 8em;
+}
+/* line 8, ../sass/_descripcion.sass */
+.mainDescripcion .descripcionIzquierda {
+  margin-right: 2em;
+}
+/* line 11, ../sass/_descripcion.sass */
+.mainDescripcion .descripcionIzquierda .descripcionImagen {
+  background-image: no-repeat;
+  background-image: fixed;
+  background-image: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 28px 10px #23282e;
+  -moz-box-shadow: 0px 0px 28px 10px #23282e;
+  box-shadow: 0px 0px 28px 10px #23282e;
+  width: 17em;
+  height: 25em;
+  margin-left: 2em;
+  display: flex;
+  flex-direction: column;
+}
+/* line 29, ../sass/_descripcion.sass */
+.mainDescripcion .descripcionIzquierda .descripcionImagen .descripcionPuntuacion {
+  background-color: #a309cd;
+  border-radius: 40px;
+  opacity: 0.8;
+  text-align: center;
+  width: 1.4em;
+  height: 1.4em;
+  padding: 0.4em;
+  font-size: medium;
+  box-shadow: 0 0 10px #a309cd;
+  padding: 0.7em;
+  font-weight: 700;
+  justify-content: flex-end;
+}
+/* line 43, ../sass/_descripcion.sass */
+.mainDescripcion .descripcionIzquierda .descripcionNombre {
+  text-align: center;
+  font-size: 2.8em;
+  font-weight: bolder;
+  margin-left: 0.7em;
+}
+/* line 49, ../sass/_descripcion.sass */
+.mainDescripcion .descripcionIzquierda #descripcionImagenJujutsu {
+  background-image: url("../img/Mangas/Portada_JujutsuKaisen.jpg");
+}
+/* line 52, ../sass/_descripcion.sass */
+.mainDescripcion .descripcionIzquierda #descripcionImagenBersek {
+  background-image: url("../img/Mangas/Portada_Bersek.jpg");
+}
+/* line 55, ../sass/_descripcion.sass */
+.mainDescripcion .descripcionIzquierda #descripcionImagenBluelock {
+  background-image: url("../img/Mangas/Portada_Bluelock.jpg");
+}
+/* line 58, ../sass/_descripcion.sass */
+.mainDescripcion .descripcionIzquierda #descripcionImagenChaninsawman {
+  background-image: url("../img/Mangas/Portada_Chainsawman.jpg");
+}
+/* line 61, ../sass/_descripcion.sass */
+.mainDescripcion .descripcionIzquierda #descripcionImagenDeathNote {
+  background-image: url("../img/Mangas/Portada_DeathNote.jpg");
+}
+/* line 64, ../sass/_descripcion.sass */
+.mainDescripcion .descripcionIzquierda #descripcionImagenDorohedoro {
+  background-image: url("../img/Mangas/Portada_Dorohedoro.jpg");
+}
+/* line 67, ../sass/_descripcion.sass */
+.mainDescripcion .descripcionIzquierda #descripcionImagenFireForce {
+  background-image: url("../img/Mangas/Portada_FireForce.jpg");
+}
+/* line 70, ../sass/_descripcion.sass */
+.mainDescripcion .descripcionIzquierda #descripcionImagenHxH {
+  background-image: url("../img/Mangas/Portada_HunterxHunter.jpg");
+}
+/* line 73, ../sass/_descripcion.sass */
+.mainDescripcion .descripcionIzquierda #descripcionImagenOnePiece {
+  background-image: url("../img/Mangas/Portada_Onepiece.jpg");
+}
+/* line 76, ../sass/_descripcion.sass */
+.mainDescripcion .descripcionIzquierda #descripcionImagenSoloLeveling {
+  background-image: url("../img/Mangas/Portada_Sololeveling.jpeg");
+}
+/* line 79, ../sass/_descripcion.sass */
+.mainDescripcion .descripcionIzquierda #descripcionImagenTokyoGhoul {
+  background-image: url("../img/Mangas/Portada_TokyoGhoul.jpg");
+}
+/* line 82, ../sass/_descripcion.sass */
+.mainDescripcion .descripcionIzquierda #descripcionImagenVagabond {
+  background-image: url("../img/Mangas/Portada_Vagabond.jpg");
+}
+/* line 85, ../sass/_descripcion.sass */
+.mainDescripcion .descripcionDerecha {
+  text-align: justify;
+}
+/* line 88, ../sass/_descripcion.sass */
+.mainDescripcion .descripcionDerecha h2 {
+  font-size: 2em;
+  font-weight: bold;
+}
+/* line 92, ../sass/_descripcion.sass */
+.mainDescripcion .descripcionDerecha .descripcionTabla {
+  text-align: start;
+  font-size: small;
+  margin-top: 6em;
+  width: 25em;
+}
+/* line 98, ../sass/_descripcion.sass */
+.mainDescripcion .descripcionDerecha .descripcionTabla .tituloCategoria {
+  padding-bottom: 1.4em;
+}
+/* line 101, ../sass/_descripcion.sass */
+.mainDescripcion .descripcionDerecha .descripcionTabla .contenidoTabla {
+  padding-left: 1em;
+}
+/* line 104, ../sass/_descripcion.sass */
+.mainDescripcion .descripcionDerecha .descripcionTabla .descripcionSeparacion {
+  padding-top: 1em;
+}
+/* line 107, ../sass/_descripcion.sass */
+.mainDescripcion .descripcionDerecha .descripcionBotones {
+  font-weight: 700;
+  margin-top: 3em;
+  margin-left: 21em;
+  text-align: right;
+}
+/* line 113, ../sass/_descripcion.sass */
+.mainDescripcion .descripcionDerecha .descripcionBotones .descripcionBotonPrecio {
+  background-color: #a309cd;
+  border-radius: 40px;
+  opacity: 0.8;
+  text-align: center;
+  width: 3em;
+  height: 1.4em;
+  padding: 0.4em;
+  font-size: medium;
+  box-shadow: 0 0 10px #a309cd;
+  margin-right: 3px;
+  padding: 0.7em;
+  margin-right: 1em;
+}
+/* line 127, ../sass/_descripcion.sass */
+.mainDescripcion .descripcionDerecha .descripcionBotones .descripcionBotonCesta {
+  background-color: #a309cd;
+  border-radius: 40px;
+  opacity: 0.8;
+  text-align: center;
+  width: 1.4em;
+  height: 1.4em;
+  padding: 0.4em;
+  font-size: medium;
+  box-shadow: 0 0 10px #a309cd;
+  margin-right: 3px;
+  padding: 0.7em;
+}
+
+@media screen and (max-width: 1200px) {
+  /* line 141, ../sass/_descripcion.sass */
+  .descripcionBotones {
+    margin-left: 0 !important;
+    text-align: left !important;
+  }
+}
+@media screen and (max-width: 1200px) {
+  /* line 141, ../sass/_descripcion.sass */
+  .descripcionBotones {
+    margin-left: 0 !important;
+    text-align: left !important;
+  }
+}
+@media screen and (max-width: 873px) {
+  /* line 147, ../sass/_descripcion.sass */
+  .mainDescripcion {
+    align-content: center;
+    margin-bottom: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+  /* line 154, ../sass/_descripcion.sass */
+  .mainDescripcion .descripcionIzquierda .descripcionImagen {
+    text-align: center;
+    width: 10em;
+    height: 15em;
+    margin-top: 2em;
+  }
+  /* line 160, ../sass/_descripcion.sass */
+  .mainDescripcion .descripcionIzquierda h1 {
+    text-align: center !important;
+    font-size: 1.7em !important;
+  }
+}
+@media screen and (max-width: 617px) {
+  /* line 166, ../sass/_descripcion.sass */
+  .mainDescripcion {
+    flex-wrap: wrap;
+  }
+  /* line 169, ../sass/_descripcion.sass */
+  .mainDescripcion .descripcionIzquierda {
+    text-align: center;
+    margin-left: 0.7em;
+  }
+  /* line 173, ../sass/_descripcion.sass */
+  .mainDescripcion .descripcionIzquierda .descripcionImagen {
+    width: 17em;
+    height: 25em;
+  }
+  /* line 177, ../sass/_descripcion.sass */
+  .mainDescripcion .descripcionIzquierda h1 {
+    text-align: center !important;
+    font-size: 2.6em !important;
+  }
+}
+/* line 1, ../sass/_contacto.sass */
+#mainContacto {
+  font-family: "Source Sans Pro", sans-serif;
+  background-image: url("../img/utiles/panel_Berserk.png");
+  background-image: no-repeat;
+  background-image: fixed;
+  background-image: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 30em;
+  height: 40em;
+  border-radius: 30px;
+  margin: auto;
+  margin-bottom: 3em;
+  -webkit-box-shadow: 0px 0px 9px 3px rgba(148, 148, 148, 0.2);
+  -moz-box-shadow: 0px 0px 9px 3px rgba(148, 148, 148, 0.2);
+  box-shadow: 0px 0px 9px 3px rgba(148, 148, 148, 0.2);
+}
+/* line 23, ../sass/_contacto.sass */
+#mainContacto #formularioContacto {
+  text-align: center;
+}
+/* line 26, ../sass/_contacto.sass */
+#mainContacto #formularioContacto h1 {
+  color: white;
+  padding: 0.5em;
+  font-weight: bold;
+  -webkit-text-shadow: 0px 0px 8px #4f4f66;
+  -moz-text-shadow: 0px 0px 8px #4f4f66;
+  text-shadow: 0px 0px 8px #4f4f66;
+}
+/* line 34, ../sass/_contacto.sass */
+#mainContacto #formularioContacto input {
+  background-color: #060d17;
+  border-radius: 10px;
+  width: 30em;
+  height: 2.5em;
+  margin-bottom: 1em;
+  border: 0;
+  color: white;
+  -webkit-box-shadow: 0px 0px 9px 3px rgba(148, 148, 148, 0.2);
+  -moz-box-shadow: 0px 0px 9px 3px rgba(148, 148, 148, 0.2);
+  box-shadow: 0px 0px 9px 3px rgba(148, 148, 148, 0.2);
+}
+/* line 46, ../sass/_contacto.sass */
+#mainContacto #formularioContacto input::placeholder {
+  color: white;
+  font-weight: bold;
+  margin-left: 10px;
+}
+/* line 51, ../sass/_contacto.sass */
+#mainContacto #formularioContacto textarea {
+  background-color: #060d17;
+  border-radius: 10px;
+  width: 30em;
+  height: 20em;
+  margin-bottom: 1em;
+  border: 0;
+  color: white;
+  -webkit-box-shadow: 0px 0px 9px 3px rgba(148, 148, 148, 0.2);
+  -moz-box-shadow: 0px 0px 9px 3px rgba(148, 148, 148, 0.2);
+  box-shadow: 0px 0px 9px 3px rgba(148, 148, 148, 0.2);
+}
+/* line 63, ../sass/_contacto.sass */
+#mainContacto #formularioContacto textarea::placeholder {
+  color: white;
+  font-weight: bold;
+}
+/* line 67, ../sass/_contacto.sass */
+#mainContacto #formularioContacto #enviar {
+  text-align: center;
+  color: white;
+  height: 3em;
+  font-weight: bold;
+}
+/* line 73, ../sass/_contacto.sass */
+#mainContacto #formularioContacto #enviar:hover {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+/* line 77, ../sass/_contacto.sass */
+#mainContacto #circulo1 {
+  background: #a309cd;
+  width: 100px;
+  height: 100px;
+  left: 10em;
+  top: 35em;
+}
+/* line 84, ../sass/_contacto.sass */
+#mainContacto #circulo3 {
+  background: #23282e;
+  width: 50px;
+  height: 50px;
+  left: 10em;
+  top: 33em;
+}
+/* line 91, ../sass/_contacto.sass */
+#mainContacto #circulo4 {
+  background: #23282e;
+  width: 50px;
+  height: 50px;
+  left: 14em;
+  top: 40em;
+}
+/* line 101, ../sass/_contacto.sass */
+#mainContacto #circulo2 {
+  background: #060d17;
+  width: 100px;
+  height: 100px;
+  left: 21em;
+  top: 5em;
+}
+/* line 108, ../sass/_contacto.sass */
+#mainContacto #circulo8 {
+  background: #a309cd;
+  width: 50px;
+  height: 50px;
+  left: 20em;
+  top: 6em;
+}
+/* line 115, ../sass/_contacto.sass */
+#mainContacto #circulo9 {
+  background: #23282e;
+  width: 25px;
+  height: 25px;
+  left: 19.5em;
+  top: 8em;
+}
+/* line 125, ../sass/_contacto.sass */
+#mainContacto #circulo5 {
+  background: #a309cd;
+  width: 100px;
+  height: 100px;
+  left: 65em;
+  top: 25em;
+}
+/* line 132, ../sass/_contacto.sass */
+#mainContacto #circulo6 {
+  background: #23282e;
+  width: 50px;
+  height: 50px;
+  left: 66em;
+  top: 23em;
+}
+/* line 139, ../sass/_contacto.sass */
+#mainContacto #circulo7 {
+  background: #23282e;
+  width: 50px;
+  height: 50px;
+  left: 64em;
+  top: 29em;
+}
+/* line 148, ../sass/_contacto.sass */
+#mainContacto .bola {
+  border-radius: 50%;
+  position: absolute;
+  z-index: 3;
+}
+/* line 153, ../sass/_contacto.sass */
+#mainContacto .bola:active {
+  -webkit-animation-name: rubberBand;
+  animation-name: rubberBand;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@media screen and (max-width: 1100px) {
+  /* line 148, ../sass/_contacto.sass */
+  #mainContacto .bola {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  /* line 160, ../sass/_contacto.sass */
+  #mainContacto {
+    width: 80%;
+    padding-top: 1.5em;
+  }
+  /* line 164, ../sass/_contacto.sass */
+  #mainContacto h1 {
+    font-size: 1.5em;
+  }
+  /* line 167, ../sass/_contacto.sass */
+  #mainContacto input {
+    width: 18em !important;
+  }
+  /* line 170, ../sass/_contacto.sass */
+  #mainContacto textarea {
+    width: 18em !important;
+  }
+}
+@media screen and (max-width: 500) {
+  /* line 160, ../sass/_contacto.sass */
+  #mainContacto {
+    width: 80%;
+    padding-top: 1.5em;
+  }
+  /* line 164, ../sass/_contacto.sass */
+  #mainContacto h1 {
+    font-size: 1.5em;
+  }
+  /* line 167, ../sass/_contacto.sass */
+  #mainContacto input {
+    width: 18em !important;
+  }
+  /* line 170, ../sass/_contacto.sass */
+  #mainContacto textarea {
+    width: 18em !important;
+  }
+}
+/* line 1, ../sass/_categorias.sass */
+.categoriaFiltro {
+  margin-left: 6em;
+  margin-top: 2em;
+}
+/* line 5, ../sass/_categorias.sass */
+.categoriaFiltro .categoriaSelect {
+  height: 2em;
+  border-radius: 5px;
+  margin-right: 1em;
+}
+/* line 10, ../sass/_categorias.sass */
+.categoriaFiltro .categoriaBoton {
+  background-color: #a309cd;
+  color: white;
+  padding: 0.4em 2em;
+  border-radius: 5px;
+  border: 0;
+  box-shadow: 0 0 10px #a309cd;
+}
+
+/* line 18, ../sass/_categorias.sass */
+.carousel {
+  position: relative;
+  margin: 3em 4em;
+}
+
+/* line 22, ../sass/_categorias.sass */
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* line 30, ../sass/_categorias.sass */
+.carousel-open:checked + .carousel-item {
+  position: static;
+  opacity: 100;
+}
+
+/* line 34, ../sass/_categorias.sass */
+.carousel-item {
+  display: flex;
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: opacity 0.6s ease-out;
+  transition: opacity 0.6s ease-out;
+  margin-left: 1em;
+  margin-right: 1em;
+  padding-top: 1em;
+}
+/* line 44, ../sass/_categorias.sass */
+.carousel-item a {
+  margin: auto;
+}
+/* line 47, ../sass/_categorias.sass */
+.carousel-item a img {
+  display: block;
+  height: 270px;
+  width: 180px;
+  margin-bottom: 4em;
+  border-radius: 10px;
+  box-shadow: 1px 2px 10px #23282e;
+}
+/* line 55, ../sass/_categorias.sass */
+.carousel-item a:hover {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+/* line 58, ../sass/_categorias.sass */
+.carousel-control {
+  color: white;
+  cursor: pointer;
+  font-size: 40px;
+  height: 40px;
+  line-height: 35px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  cursor: pointer;
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  text-align: center;
+  width: 40px;
+  z-index: 10;
+}
+/* line 74, ../sass/_categorias.sass */
+.carousel-control:hover {
+  color: #a309cd;
+}
+
+/* line 77, ../sass/_categorias.sass */
+.carousel-control.prev {
+  left: 2%;
+}
+
+/* line 80, ../sass/_categorias.sass */
+.carousel-control.next {
+  right: 2%;
+}
+
+/* line 86, ../sass/_categorias.sass */
+#carousel-1:checked ~ .control-1 {
+  display: block;
+}
+/* line 93, ../sass/_categorias.sass */
+#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet {
+  color: #a309cd;
+}
+
+/* line 99, ../sass/_categorias.sass */
+#carousel-2:checked ~ .control-2 {
+  display: block;
+}
+/* line 106, ../sass/_categorias.sass */
+#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet {
+  color: #a309cd;
+}
+
+/* line 112, ../sass/_categorias.sass */
+#carousel-3:checked ~ .control-3 {
+  display: block;
+}
+/* line 119, ../sass/_categorias.sass */
+#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+  color: #a309cd;
+}
+
+/* line 122, ../sass/_categorias.sass */
+.carousel-indicators {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 10;
+}
+/* line 133, ../sass/_categorias.sass */
+.carousel-indicators li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+/* line 137, ../sass/_categorias.sass */
+.carousel-bullet {
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-size: 35px;
+}
+/* line 143, ../sass/_categorias.sass */
+.carousel-bullet:hover {
+  color: #23282e;
+}
+
+/* line 1, ../sass/_carrito.sass */
+#mainCarrito {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: center;
+  margin-top: 1em;
+  margin-bottom: 3em;
+  color: white;
+}
+/* line 12, ../sass/_carrito.sass */
+#mainCarrito .tituloCarrito {
+  margin: 0;
+  font-size: 2em;
+}
+/* line 16, ../sass/_carrito.sass */
+#mainCarrito .totalCarrito {
+  margin-top: 0;
+  margin-bottom: 2.2em;
+}
+/* line 20, ../sass/_carrito.sass */
+#mainCarrito .contenidoIzquierdaCarrito {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  margin-right: 5em;
+  background-color: #23282e;
+  border-radius: 10px;
+  padding: 2em;
+  -webkit-box-shadow: 0px 0px 28px 10px #23282e;
+  -moz-box-shadow: 0px 0px 28px 10px #23282e;
+  box-shadow: 0px 0px 28px 10px #23282e;
+}
+/* line 33, ../sass/_carrito.sass */
+#mainCarrito .contenidoIzquierdaCarrito .carritoProductos .carritoJujutsu {
+  margin-bottom: 1em;
+}
+/* line 36, ../sass/_carrito.sass */
+#mainCarrito .contenidoIzquierdaCarrito .carritoProductos .carritoProducto {
+  display: flex;
+  width: 30em;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+/* line 42, ../sass/_carrito.sass */
+#mainCarrito .contenidoIzquierdaCarrito .carritoProductos .carritoProducto ul {
+  padding-left: 0;
+  list-style: none;
+}
+/* line 46, ../sass/_carrito.sass */
+#mainCarrito .contenidoIzquierdaCarrito .carritoProductos .carritoProducto .imgProductoCarrito {
+  width: 100px;
+  height: 150px;
+  padding: 0.7em;
+  border-radius: 20px;
+}
+/* line 52, ../sass/_carrito.sass */
+#mainCarrito .contenidoIzquierdaCarrito .carritoProductos .carritoProducto .cantidadCarrito {
+  padding: 0.3em;
+  width: 4em;
+  border-radius: 5px;
+  margin-top: 1em;
+}
+/* line 58, ../sass/_carrito.sass */
+#mainCarrito .carritoZonapago {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  background-color: #23282e;
+  border-radius: 10px;
+  padding: 2em;
+  margin-top: 2.5em;
+  -webkit-box-shadow: 0px 0px 28px 10px #23282e;
+  -moz-box-shadow: 0px 0px 28px 10px #23282e;
+  box-shadow: 0px 0px 28px 10px #23282e;
+}
+/* line 70, ../sass/_carrito.sass */
+#mainCarrito .carritoZonapago .carritoBotonespago {
+  text-align: center;
+}
+/* line 73, ../sass/_carrito.sass */
+#mainCarrito .carritoZonapago .carritoBotonespago .botonContinuar {
+  height: 35px;
+  text-align: center;
+  margin-bottom: 0.3em;
+  border-radius: 30px;
+  padding-left: 11em;
+  padding-right: 11em;
+  color: white;
+  font-weight: bold;
+  background-color: #a309cd;
+  border: 0;
+  box-shadow: 0 0 10px #a309cd;
+}
+/* line 86, ../sass/_carrito.sass */
+#mainCarrito .carritoZonapago .carritoBotonespago .botonContinuar:hover {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+/* line 89, ../sass/_carrito.sass */
+#mainCarrito .carritoZonapago .carritoBotonespago .botonO {
+  margin: 0;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+/* line 94, ../sass/_carrito.sass */
+#mainCarrito .carritoZonapago .carritoBotonespago .botonPaypal {
+  width: 4em;
+  height: 30px;
+  background-color: white;
+  margin-top: 0.3em;
+  border-radius: 30px;
+  padding-left: 9.6em;
+  padding-right: 9.6em;
+}
+/* line 103, ../sass/_carrito.sass */
+#mainCarrito .carritoZonapago .carritoBotonespago .botonPaypal:hover {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+/* line 108, ../sass/_carrito.sass */
+#mainCarrito .carritoZonapago .carritoResumen .carritoTabla .carritoTablaPrecio {
+  padding-left: 9.9em;
+  text-align: right;
+}
+/* line 112, ../sass/_carrito.sass */
+#mainCarrito .carritoZonapago .carritoResumen .carritoTabla .carritoTablaPrecio2 {
+  padding-left: 12em;
+  text-align: right;
+}
+/* line 116, ../sass/_carrito.sass */
+#mainCarrito .carritoZonapago .carritoResumen hr {
+  border: 0.5px dashed white;
+}
+/* line 119, ../sass/_carrito.sass */
+#mainCarrito .carritoTabla {
+  margin-top: 1em;
+}
+/* line 122, ../sass/_carrito.sass */
+#mainCarrito .carritoTabla h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/* line 126, ../sass/_carrito.sass */
+#mainCarrito .codigoPro {
+  width: 27.5em;
+  height: 1.6em;
+  margin-top: 1em;
+  border-radius: 5px;
+  border: 0;
+}
+/* line 133, ../sass/_carrito.sass */
+#mainCarrito .codigoPro::placeholder {
+  color: black;
+  font-weight: bold;
+}
+/* line 137, ../sass/_carrito.sass */
+#mainCarrito .carritoFormaspago {
+  margin-top: 2em;
+}
+/* line 140, ../sass/_carrito.sass */
+#mainCarrito .carritoFormaspago h5 {
+  margin-bottom: 0.2em;
+  font-weight: 400;
+  font-size: x-small;
+}
+/* line 145, ../sass/_carrito.sass */
+#mainCarrito .carritoFormaspago .imgFormasPago {
+  width: 23em;
+}
+
+@media screen and (max-width: 1080px) {
+  /* line 149, ../sass/_carrito.sass */
+  #mainCarrito {
+    flex-wrap: wrap;
+    align-content: center;
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+  /* line 155, ../sass/_carrito.sass */
+  #mainCarrito .contenidoIzquierdaCarrito {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 580px) {
+  /* line 160, ../sass/_carrito.sass */
+  .contenidoIzquierdaCarrito {
+    padding: 1em;
+  }
+  /* line 163, ../sass/_carrito.sass */
+  .contenidoIzquierdaCarrito .carritoProducto {
+    width: 18em !important;
+  }
+  /* line 166, ../sass/_carrito.sass */
+  .contenidoIzquierdaCarrito .carritoProducto .imgProductoCarrito {
+    width: 70px;
+    height: 120px;
+    padding: 0.5em;
+  }
+  /* line 171, ../sass/_carrito.sass */
+  .contenidoIzquierdaCarrito .carritoProducto .cantidadCarrito {
+    padding: 0.2em;
+    width: 2em;
+  }
+
+  /* line 175, ../sass/_carrito.sass */
+  .carritoZonapago {
+    width: 19em !important;
+  }
+  /* line 178, ../sass/_carrito.sass */
+  .carritoZonapago .botonContinuar {
+    padding-left: 8em !important;
+    padding-right: 8em !important;
+  }
+  /* line 182, ../sass/_carrito.sass */
+  .carritoZonapago .botonPaypal {
+    padding-left: 7em !important;
+    padding-right: 7em !important;
+  }
+  /* line 188, ../sass/_carrito.sass */
+  .carritoZonapago .carritoResumen .carritoTabla .carritoTablaPrecio {
+    padding-left: 5em !important;
+  }
+  /* line 191, ../sass/_carrito.sass */
+  .carritoZonapago .carritoResumen .carritoTabla .carritoTablaPrecio2 {
+    padding-left: 7em !important;
+  }
+  /* line 194, ../sass/_carrito.sass */
+  .carritoZonapago .carritoResumen hr {
+    border: 0.5px dashed white;
+  }
+
+  /* line 197, ../sass/_carrito.sass */
+  .codigoPro {
+    width: 22em !important;
+  }
+
+  /* line 200, ../sass/_carrito.sass */
+  .imgFormasPago {
+    width: 18.5em !important;
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1);
+  }
+}
+/* line 32, ../sass/style.sass */
+body {
+  padding: 0px;
+  margin: 0px;
+  background-color: #060d17;
+  font-family: "Source Sans Pro", sans-serif;
+}
+/* line 38, ../sass/style.sass */
+body::-webkit-scrollbar {
+  width: 12px;
+}
+/* line 41, ../sass/style.sass */
+body::-webkit-scrollbar-track {
+  background: #23282e;
+}
+/* line 44, ../sass/style.sass */
+body::-webkit-scrollbar-thumb {
+  background-color: #060d17;
+  border-radius: 20px;
+  border: 3px solid #23282e;
+}
+
+/* line 49, ../sass/style.sass */
+a {
+  text-decoration: none;
+  color: white;
+}

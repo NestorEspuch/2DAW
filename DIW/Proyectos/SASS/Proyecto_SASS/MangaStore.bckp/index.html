@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Néstor Espuch" />
+    <meta
+      name="description"
+      content="Un objetivo sencillo: simplificar la compra de mangas"
+    />
+    <!-- Funte SourceSansPro google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- /Funte SourceSansPro google -->
+
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>MangaStore</title>
+  </head>
+  <body>
+    <header>
+      <!-- Logo y nombre -->
+      <div class="logoNombreHeader">
+        <a href="index.html"
+          ><img
+            src="img/logo_Mangastore.png"
+            alt="MangaStore"
+            class="logoHeader"
+        /></a>
+        <h1 class="tituloHeader"><a href="index.html">MangaStore</a></h1>
+      </div>
+      <!-- /Logo y nombre -->
+
+      <!-- Barra navegación -->
+      <!-- Enlaces -->
+      <nav class="menu">
+        <ul class="menuPrincipal">
+          <li class="enlaces">
+            <a class="enlacesNav" href="index.html">Inicio</a>
+          </li>
+          <li class="dropdown-arrow enlaces">
+            <a class="enlacesNav" href="#">Categorias</a>
+            <ul class="submenu">
+              <li><a href="src/categorias.html">Fantasía</a></li>
+              <li><a href="src/categorias.html">Terror</a></li>
+              <li><a href="src/categorias.html">Intriga</a></li>
+              <li><a href="src/categorias.html">Acción</a></li>
+              <li><a href="src/categorias.html">Sobrenatural</a></li>
+              <li><a href="src/categorias.html">Colegios y Universidad</a></li>
+              <li><a href="src/categorias.html">Shonen</a></li>
+              <li><a href="src/categorias.html">Sheinen</a></li>
+              <li><a href="src/categorias.html">Aventura</a></li>
+            </ul>
+          </li>
+          <li class="enlaces">
+            <a class="enlacesNav" href="src/contacto.html">Contacto</a>
+          </li>
+          <li class="enlaces">
+            <a class="enlacesNav" href="src/sobreNosotros.html"
+              >Sobre nosotros</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <!-- /Enlaces -->
+
+      <!-- Buscador -->
+      <form class="inputHeader">
+        <input
+          type="search"
+          name="buscar"
+          class="buscarIndex"
+          placeholder="   &#128270    Búsqueda de Manga o Manwa"
+        />
+        <!-- Icono lupa -->
+
+        <!-- <img
+          src="img/Iconos/lupa.png"
+          alt="Búsqueda de Manga o Manwa"
+          class="lupaHeader"
+        /> -->
+        <!-- /Icono lupa -->
+      </form>
+      <!-- Buscador -->
+
+      <!-- Carrito -->
+      <div class="carritoHeader">
+        <a href="src/carrito.html"
+          ><img
+            src="img/Iconos/icono_Carrito.png"
+            alt="Carrito"
+            class="imgCarritoHeader"
+        /></a>
+        <a href="src/carrito.html" class="textCarrito">Carrito (0)</a>
+      </div>
+      <!-- /Carrito -->
+      <!-- /Barra navegación -->
+    </header>
+
+    <!-- Contendor principal -->
+    <main id="mainIndex">
+      <!-- Filtro -->
+      <div id="filtro">
+        <form>
+          <select name="filtro">
+            <option value="value1" selected>Filtrar</option>
+            <option value="value1">Fantasía</option>
+            <option value="value2">Terror</option>
+            <option value="value3">Intriga</option>
+            <option value="value3">Acción</option>
+            <option value="value3">Sobrenatural</option>
+            <option value="value3">Colegios y Universidad</option>
+            <option value="value3">Shonen</option>
+            <option value="value3">Sheinen</option>
+            <option value="value3">Aventura</option>
+          </select>
+        </form>
+      </div>
+      <!-- /Filtro -->
+      <!-- Contenido -->
+      <div id="contenido">
+        <!-- Primera fila -->
+        <!-- <div id="fila1"> -->
+        <!-- Manga1 -->
+        <a href="src/descripcion_Berserk.html">
+          <div id="berserk" class="manga">
+            <!-- Etiqueta nuevo -->
+            <div class="nuevo">Nuevo</div>
+            <!-- /Etiqueta nuevo -->
+            <!-- Precio y nombre -->
+            <div class="precioNombre">
+              <div class="precio">20€</div>
+              <div class="nombre">Berserk</div>
+            </div>
+            <!-- /Precio y nombre -->
+          </div>
+        </a>
+        <!-- /Manga1 -->
+        <!-- Manga2 -->
+        <a href="src/descripcion_Bluelock.html">
+          <div id="bluelock" class="manga">
+            <!-- Etiqueta nuevo -->
+            <div class="nuevo">Nuevo</div>
+            <!-- /Etiqueta nuevo -->
+            <!-- Precio y nombre -->
+            <div class="precioNombre">
+              <div class="precio">7.90€</div>
+              <div class="nombre">Bluelock</div>
+            </div>
+            <!-- /Precio y nombre -->
+          </div>
+        </a>
+        <!-- /Manga2 -->
+        <!-- Manga3 -->
+        <a href="src/descripcion_Chainsawman.html">
+          <div id="chainsawman" class="manga">
+            <!-- Etiqueta nuevo -->
+            <div class="nuevo">Nuevo</div>
+            <!-- /Etiqueta nuevo -->
+            <!-- Precio y nombre -->
+            <div class="precioNombre">
+              <div class="precio">10€</div>
+              <div class="nombre">Chainsawman</div>
+            </div>
+            <!-- /Precio y nombre -->
+          </div>
+        </a>
+        <!-- /Manga3 -->
+        <!-- Manga4 -->
+        <a href="src/descripcion_DeathNote.html">
+          <div id="deathnote" class="manga">
+            <!-- Etiqueta nuevo -->
+            <div class="nuevo">Nuevo</div>
+            <!-- /Etiqueta nuevo -->
+            <!-- Precio y nombre -->
+            <div class="precioNombre">
+              <div class="precio">7.99€</div>
+              <div class="nombre">Death Note</div>
+            </div>
+            <!-- /Precio y nombre -->
+          </div>
+        </a>
+        <!-- /Manga4-->
+        <!-- Manga5 -->
+        <a href="src/descripcion_Dorohedoro.html">
+          <div id="dorohedoro" class="manga">
+            <!-- Etiqueta nuevo -->
+            <div class="nuevo">Nuevo</div>
+            <!-- /Etiqueta nuevo -->
+            <!-- Precio y nombre -->
+            <div class="precioNombre">
+              <div class="precio">9.99€</div>
+              <div class="nombre">Dorohedoro</div>
+            </div>
+            <!-- /Precio y nombre -->
+          </div>
+        </a>
+        <!-- /Manga5 -->
+        <!-- Manga6 -->
+        <a href="src/descripcion_FireForce.html">
+          <div id="fireforce" class="manga">
+            <!-- Etiqueta nuevo -->
+            <div class="nuevo">Nuevo</div>
+            <!-- /Etiqueta nuevo -->
+            <!-- Precio y nombre -->
+            <div class="precioNombre">
+              <div class="precio">7.50€</div>
+              <div class="nombre">Fire Force</div>
+            </div>
+            <!-- /Precio y nombre -->
+          </div>
+        </a>
+        <!-- /Manga6 -->
+        <!-- </div> -->
+        <!-- /Primera fila -->
+        <!-- Segunda fila -->
+        <!-- <div id="fila2"> -->
+        <!-- Manga1 -->
+        <a href="src/descripcion_HxH.html">
+          <div id="hxh" class="manga">
+            <!-- Etiqueta nuevo -->
+            <div>Nuevo</div>
+            <!-- /Etiqueta nuevo -->
+            <!-- Precio y nombre -->
+            <div class="precioNombre">
+              <div class="precio">17€</div>
+              <div class="nombre">HxH</div>
+            </div>
+            <!-- /Precio y nombre -->
+          </div>
+        </a>
+        <!-- /Manga1 -->
+        <!-- Manga2 -->
+        <a href="src/descripcion_Jujutsu.html">
+          <div id="jujutsu" class="manga">
+            <!-- Etiqueta nuevo -->
+            <div class="nuevo">Nuevo</div>
+            <!-- /Etiqueta nuevo -->
+            <!-- Precio y nombre -->
+            <div class="precioNombre">
+              <div class="precio">12€</div>
+              <div class="nombre">Jujutsu</div>
+            </div>
+            <!-- /Precio y nombre -->
+          </div>
+        </a>
+        <!-- /Manga2 -->
+        <!-- Manga3 -->
+        <a href="src/descripcion_OnePiece.html">
+          <div id="onepiece" class="manga">
+            <!-- Etiqueta nuevo -->
+            <div class="nuevo">Nuevo</div>
+            <!-- /Etiqueta nuevo -->
+            <!-- Precio y nombre -->
+            <div class="precioNombre">
+              <div class="precio">10€</div>
+              <div class="nombre chainsawman">Open Piece</div>
+            </div>
+            <!-- /Precio y nombre -->
+          </div>
+        </a>
+        <!-- /Manga3 -->
+        <!-- Manga4 -->
+        <a href="src/descripcion_SoloLeveling.html">
+          <div id="sololeveling" class="manga">
+            <!-- Etiqueta nuevo -->
+            <div class="nuevo">Nuevo</div>
+            <!-- /Etiqueta nuevo -->
+            <!-- Precio y nombre -->
+            <div class="precioNombre">
+              <div class="precio">5.77€</div>
+              <div class="nombre">Solo leveling</div>
+            </div>
+            <!-- /Precio y nombre -->
+          </div>
+        </a>
+        <!-- /Manga4-->
+        <!-- Manga5 -->
+        <a href="src/descripcion_TokyoGhoul.html">
+          <div id="tokyoghoul" class="manga">
+            <!-- Etiqueta nuevo -->
+            <div class="nuevo">Nuevo</div>
+            <!-- /Etiqueta nuevo -->
+            <!-- Precio y nombre -->
+            <div class="precioNombre">
+              <div class="precio">9.99€</div>
+              <div class="nombre">Tokyo Ghoul</div>
+            </div>
+            <!-- /Precio y nombre -->
+          </div>
+        </a>
+        <!-- /Manga5 -->
+        <!-- Manga6 -->
+        <a href="src/descripcion_Vagabond.html">
+          <div id="vagabond" class="manga">
+            <!-- Etiqueta nuevo -->
+            <div class="nuevo">Nuevo</div>
+            <!-- /Etiqueta nuevo -->
+            <!-- Precio y nombre -->
+            <div class="precioNombre">
+              <div class="precio">10€</div>
+              <div class="nombre">Vagabond</div>
+            </div>
+            <!-- /Precio y nombre -->
+          </div>
+        </a>
+        <!-- /Manga6 -->
+        <!-- </div> -->
+        <!-- /Segunda fila -->
+      </div>
+      <!-- /Contenido -->
+    </main>
+    <!-- /Contendor principal -->
+    <!-- Pie de página -->
+    <footer>
+      <!-- Parte izquierda -->
+      <ul>
+        <li class="enlacesPie">©MangaStore - Néstor Espuch</li>
+        <li class="enlacesPie">
+          <a href="src/sobreNosotros.html">Aviso legal</a>
+        </li>
+        <li class="enlacesPie"><a href="src/contacto.html">Contactar</a></li>
+      </ul>
+      <!-- /Parte izquierda -->
+      <!-- Parte derecha -->
+      <ul class="iconosPie">
+        <li class="enlacesIconosPie">
+          <a
+            href="https://www.instagram.com/nestorespuch15/?hl=es"
+            target="_blank"
+            ><img
+              src="img/Iconos/icono_Instagram.png"
+              alt="Instagram"
+              class="iconoPie"
+          /></a>
+        </li>
+        <li class="enlacesIconosPie">
+          <a href="https://www.linkedin.com/in/nestorespuch/" target="_blank"
+            ><img
+              src="img/Iconos/icono_Linkdln.png"
+              alt="LinkdIn"
+              class="iconoPie"
+          /></a>
+        </li>
+        <li class="enlacesIconosPie">
+          <a href="https://twitter.com/nestorespuch15" target="_blank"
+            ><img
+              src="img/Iconos/icono_Twitter.png"
+              alt="Twitter"
+              class="iconoPie"
+          /></a>
+        </li>
+        <li class="enlacesIconosPie">
+          <a href="https://github.com/NestorEspuch" target="_blank"
+            ><img
+              src="img/Iconos/icono_GitHub.png"
+              alt="GitHUb"
+              class="iconoPie"
+          /></a>
+        </li>
+      </ul>
+      <!-- /Parte derecha -->
+    </footer>
+    <!-- /Pie de página -->
+  </body>
+</html>

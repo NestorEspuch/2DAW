@@ -1,0 +1,119 @@
+@keyframes iluminar {
+  from {
+    background-color: #666;
+    color: #eee;
+  }
+  to {
+    background-color: #888;
+    color: #fff;
+  }
+}
+/* line 12, ../sass/_menu.scss */
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* line 16, ../sass/_menu.scss */
+header {
+  padding: 12px 30px 12px 30px;
+  font-size: 1.8em;
+  background-color: #eee;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #aaa;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+/* line 25, ../sass/_menu.scss */
+li.categoria {
+  float: left;
+}
+/* line 27, ../sass/_menu.scss */
+li.categoria > a {
+  transition-property: padding;
+  transition-timing-function: ease-out;
+  transition-delay: 0.5s;
+  -webkit-tansition-property: padding;
+  -webkit-transition-timing-function: ease-out;
+  -webkit-transition-delay: 0.5s;
+  -moz-tansition-property: padding;
+  -moz-transition-timing-function: ease-out;
+  -moz-transition-delay: 0.5s;
+}
+/* line 30, ../sass/_menu.scss */
+li.categoria a:hover {
+  padding: 10px 20px 10px 20px;
+}
+/* line 35, ../sass/_menu.scss */
+li.categoria:hover ul {
+  height: 100px;
+}
+
+/* line 40, ../sass/_menu.scss */
+nav {
+  position: absolute;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* line 44, ../sass/_menu.scss */
+nav ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+/* line 49, ../sass/_menu.scss */
+nav > ul {
+  width: 100%;
+  top: 32px;
+  color: #eee;
+  background-color: #666;
+}
+/* line 55, ../sass/_menu.scss */
+nav a {
+  color: #eee;
+  background-color: #666;
+  text-decoration: none;
+  width: 160px;
+  padding-top: 7px;
+  padding-right: 20px;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+}
+/* line 66, ../sass/_menu.scss */
+nav a:hover {
+  color: #fff;
+  background-color: #888;
+  -moz-animation: iluminar 0.4s linear;
+  -webkit-animation: iluminar 0.4s linear;
+  animation: iluminar 0.4s linear;
+}
+
+/* line 73, ../sass/_menu.scss */
+ul.submenu {
+  transition-property: height;
+  transition-timing-function: linear;
+  transition-delay: 0.5s;
+  -webkit-tansition-property: height;
+  -webkit-transition-timing-function: linear;
+  -webkit-transition-delay: 0.5s;
+  -moz-tansition-property: height;
+  -moz-transition-timing-function: linear;
+  -moz-transition-delay: 0.5s;
+  position: absolute;
+  height: 0px;
+  overflow: hidden;
+}
+
+/* line 80, ../sass/_menu.scss */
+footer {
+  color: #eee;
+  background-color: #666;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  padding: 5px;
+}

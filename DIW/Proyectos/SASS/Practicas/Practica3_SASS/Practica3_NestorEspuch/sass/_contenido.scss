@@ -1,0 +1,86 @@
+@import "compass";
+
+%button-block {
+    @include box-sizing(border-box);
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+%input-block {
+    @include box-sizing(border-box);
+    width: 100%;
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: 1px solid #bbb;
+}
+
+$icons: sprite-map("../img/*.png");
+
+@each $i in sprite-names($icons) {
+    .icon-#{$i} {
+        background-position: sprite-position($icons, $i);
+        @include sprite-dimensions($icons, $i);
+    }
+}
+
+i{
+    background: $icons;
+    display: inline-block;
+}
+
+#contenido {
+    padding: 30px 20px;
+
+    .col-left {
+        @include box-sizing(border-box);
+        width: 30%;
+        float: left;
+        padding: 10px;
+
+        .login {
+            button {
+                @extend %button-block;
+            }
+            input {
+                @extend %input-block;
+            }
+        }
+
+        @include responsive(small){
+            float: none;
+            width: 100%;
+        }
+    }
+    .col-right {
+        @include box-sizing(border-box);
+        margin-left: 30%;
+        width: 70%;
+        padding: 10px;
+
+        h1 {
+            color: $titleColor;
+            font-size: 1.6em;
+        }
+
+        @include responsive(small){
+            margin-left: 0;
+            width: 100%;
+        }
+    }
+
+    .button-action {
+        background-color: $backgroundColor;
+        color: white;
+
+        &:hover {
+            background-color: lighten($backgroundColorHover,20%);
+        }
+    }
+
+    @include responsive(medium){
+        padding: 10px 20px;
+    }
+}
