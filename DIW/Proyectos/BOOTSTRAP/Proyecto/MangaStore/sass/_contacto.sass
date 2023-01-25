@@ -1,0 +1,171 @@
+#mainContacto
+  font-family: "Source Sans Pro", sans-serif
+  background-image: url("../img/utiles/panel_Berserk.png")
+  background-image: no-repeat
+  background-image: fixed
+  background-image: center
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
+
+  //filter:brightness(0.4);
+
+  width: 30em
+  height: 40em
+  border-radius: 30px
+  margin: auto
+  margin-bottom: 3em
+  -webkit-box-shadow: 0px 0px 9px 3px rgba(148, 148, 148, 0.2)
+  -moz-box-shadow: 0px 0px 9px 3px rgba(148, 148, 148, 0.2)
+  box-shadow: 0px 0px 9px 3px rgba(148, 148, 148, 0.2)
+
+  #formularioContacto
+    text-align: center
+
+    h1
+      color: $colorPalabras
+      padding: 0.5em
+      font-weight: bold
+      -webkit-text-shadow: 0px 0px 8px #4f4f66
+      -moz-text-shadow: 0px 0px 8px #4f4f66
+      text-shadow: 0px 0px 8px #4f4f66
+
+    input
+      background-color: $colorFondoPrincipal
+      border-radius: 10px
+      width: 30em
+      height: 2.5em
+      margin-bottom: 1em
+      border: 0
+      color: $colorPalabras
+      -webkit-box-shadow: 0px 0px 9px 3px rgba(148, 148, 148, 0.2)
+      -moz-box-shadow: 0px 0px 9px 3px rgba(148, 148, 148, 0.2)
+      box-shadow: 0px 0px 9px 3px rgba(148, 148, 148, 0.2)
+
+      &::placeholder
+        color: $colorPalabras
+        font-weight: bold
+        margin-left: 10px
+
+    textarea
+      background-color: $colorFondoPrincipal
+      border-radius: 10px
+      width: 30em
+      height: 20em
+      margin-bottom: 1em
+      border: 0
+      color: $colorPalabras
+      -webkit-box-shadow: 0px 0px 9px 3px rgba(148, 148, 148, 0.2)
+      -moz-box-shadow: 0px 0px 9px 3px rgba(148, 148, 148, 0.2)
+      box-shadow: 0px 0px 9px 3px rgba(148, 148, 148, 0.2)
+
+      &::placeholder
+        color: $colorPalabras
+        font-weight: bold
+
+    #enviar
+      text-align: center
+      color: $colorPalabras
+      height: 3em
+      font-weight: bold
+
+      &:hover
+        +animationHoverManga
+
+  // Izquierda color
+  #circulo1
+    background: $colorPrincipal
+    width: 100px
+    height: 100px
+    left: 10em
+    top: 35em
+
+  #circulo3
+    background: $colorFondoSegundario
+    width: 50px
+    height: 50px
+    left: 10em
+    top: 33em
+
+  #circulo4
+    background: $colorFondoSegundario
+    width: 50px
+    height: 50px
+    left: 14em
+    top: 40em
+
+  // /Izquierda color
+
+  // Izquierda sin color
+  #circulo2
+    background: $colorFondoPrincipal
+    width: 100px
+    height: 100px
+    left: 21em
+    top: 5em
+
+  #circulo8
+    background: $colorPrincipal
+    width: 50px
+    height: 50px
+    left: 20em
+    top: 6em
+
+  #circulo9
+    background: $colorFondoSegundario
+    width: 25px
+    height: 25px
+    left: 19.5em
+    top: 8em
+
+  // /Izquierda sin color
+
+  // Derecha color
+  #circulo5
+    background: $colorPrincipal
+    width: 100px
+    height: 100px
+    left: 65em
+    top: 25em
+
+  #circulo6
+    background: $colorFondoSegundario
+    width: 50px
+    height: 50px
+    left: 66em
+    top: 23em
+
+  #circulo7
+    background: $colorFondoSegundario
+    width: 50px
+    height: 50px
+    left: 64em
+    top: 29em
+
+  // /Derecha color
+
+  .bola
+    border-radius: 50%
+    position: absolute
+    z-index: 3
+
+    &:active
+      +animacionBolas
+
+    +responsive(1100px)
+      display: none
+
++responsive(500)
+  #mainContacto
+    width: 80%
+    padding-top: 1.5em
+
+    h1
+      font-size: 1.5em
+
+    input
+      width: 18em !important
+
+    textarea
+      width: 18em !important
