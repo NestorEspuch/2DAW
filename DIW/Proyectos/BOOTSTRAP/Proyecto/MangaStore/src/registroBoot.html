@@ -31,7 +31,12 @@
 
     <link rel="shortcut icon" href="../img/favicon.ico" />
     <!-- <link rel="stylesheet" href="../css/style.css" /> -->
-
+    <style>
+      .form-control {
+        background-color: #060d17 !important;
+        color: white !important;
+      }
+    </style>
     <title>MangaStore</title>
   </head>
   <body>
@@ -134,11 +139,11 @@
             </ul>
             <form class="d-flex" style="width: 35%">
               <input
-                class="form-control me-3 busquedaInput"
+                class="form-control me-3"
                 type="search"
                 placeholder="Busqueda de Manga o Manhwa"
                 aria-label="Search"
-                style="background-color: #23282e !important; color: white;"
+                style="background-color: #23282e !important"
               />
             </form>
             <svg
@@ -179,123 +184,245 @@
     </header>
 
     <!-- Contendor principal -->
-    <section class="h-100 gradient-form">
+    <section class="h-100 bg-dark">
       <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
-          <div class="col-xl-10">
+          <div class="col">
             <div
-              class="card rounded-3 text-black"
+              class="card card-registration my-4"
               style="
                 border: 0;
                 box-shadow: 0px 0px 25px 8px rgba(35, 40, 46, 1);
+                border-radius: 10px;
               "
             >
               <div class="row g-0">
-                <div class="col-lg-6">
-                  <div class="card-body p-md-2 mx-md-2">
-                    <div class="text-center pulse">
-                      <img
-                        src="../img/logo_Mangastore.png"
-                        style="width: 185px; box-shadow: none"
-                        alt="logo"
-                      />
-                      <h4
-                        class="mb-5 pb-1"
-                        style="
-                          color: #a309cd;
-                          font-size: 3em;
-                          font-weight: bold;
-                        "
-                      >
-                        MangaStore
-                      </h4>
+                <div class="col-xl-6 d-none d-xl-block">
+                  <img
+                    src="../img/utiles/Guts.png"
+                    alt="Sample photo"
+                    class="img-fluid mt-5"
+                    style="
+                      border-top-left-radius: 0.25rem;
+                      border-bottom-left-radius: 0.25rem;
+                      box-shadow: none;
+                    "
+                  />
+                </div>
+                <div class="col-xl-6">
+                  <div class="card-body p-md-5 text-black">
+                    <h3
+                      class="mb-5 text-uppercase"
+                      style="
+                        color: #a309cd;
+                        font-size: 2.4em;
+                        font-weight: bold;
+                        text-align: center;
+                      "
+                    >
+                      Registro MangaStore
+                    </h3>
+
+                    <div class="row">
+                      <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                          <input
+                            type="text"
+                            class="form-control form-control-m"
+                            placeholder="Néstor"
+                          />
+                          <label class="form-label ms-1">Nombre</label>
+                        </div>
+                      </div>
+                      <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                          <input
+                            type="text"
+                            class="form-control form-control-m"
+                            placeholder="Espuch"
+                          />
+                          <label class="form-label ms-1">Apellidos</label>
+                        </div>
+                      </div>
                     </div>
 
-                    <form>
-                      <p class="mb-4">Acceda a su cuenta</p>
+                    <div class="row">
+                      <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                          <input
+                            type="text"
+                            class="form-control form-control-m"
+                            placeholder="Usuario ejemplo"
+                          />
+                          <label class="form-label ms-1">Usuario</label>
+                        </div>
+                      </div>
+                      <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                          <input
+                            type="number"
+                            class="form-control form-control-m"
+                            placeholder="18"
+                          />
+                          <label class="form-label ms-1">Edad</label>
+                        </div>
+                      </div>
+                    </div>
 
-                      <div class="form-outline mb-4">
+                    <div class="form-outline mb-4">
+                      <input
+                        type="text"
+                        class="form-control form-control-m"
+                        placeholder="C/ Dirección de ejemplo, 10"
+                      />
+                      <label class="form-label ms-1">Dirección</label>
+                    </div>
+
+                    <div
+                      class="d-md-flex justify-content-start align-items-center mb-4 py-2"
+                    >
+                      <h6 class="mb-0 me-4 ms-1">Genero:</h6>
+
+                      <div class="form-check form-check-inline mb-0 me-4">
                         <input
-                          type="email"
-                          id="form2Example11"
-                          class="form-control form-control-2"
-                          placeholder="Nombre de usuario o email"
+                          class="form-check-input"
+                          type="radio"
+                          name="inlineRadioOptions"
+                          value="option1"
                         />
-                        <label class="form-label ms-1" for="form2Example11"
-                          >Usuario</label
-                        >
+                        <label class="form-check-label">Mujer</label>
                       </div>
 
-                      <div class="form-outline mb-4">
+                      <div class="form-check form-check-inline mb-0 me-4">
                         <input
-                          type="password"
-                          id="form2Example22"
-                          class="form-control form-control-2"
-                          placeholder="Contraseña"
+                          class="form-check-input"
+                          type="radio"
+                          name="inlineRadioOptions"
+                          value="option2"
                         />
-                        <label class="form-label ms-1" for="form2Example22"
-                          >Contraseña</label
-                        >
+                        <label class="form-check-label">Hombre</label>
                       </div>
 
-                      <div class="text-center pt-1 mb-5 pb-1 pulse">
-                        <button
-                          class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
-                          type="button"
+                      <div class="form-check form-check-inline mb-0">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="inlineRadioOptions"
+                          value="option3"
+                        />
+                        <label class="form-check-label">Otro</label>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-6 mb-4">
+                        <select
+                          class="select"
                           style="
-                            background-color: #a309cd;
-                            font-weight: bold;
-                            border-radius: 30px;
+                            background-color: #060d17;
+                            color: white;
+                            border-radius: 10px;
                             border: 0;
-                            width: 100%;
-                            -webkit-box-shadow: 0px 0px 15px 4px
-                              rgba(163, 9, 205, 1);
-                            -moz-box-shadow: 0px 0px 15px 4px
-                              rgba(163, 9, 205, 1);
-                            box-shadow: 0px 0px 15px 4px rgba(163, 9, 205, 1);
                           "
                         >
-                          Iniciar sesión
-                        </button>
+                          <option value="1">Ciudad</option>
+                          <option value="2">Opcion 1</option>
+                          <option value="3">Opcion 2</option>
+                          <option value="4">Opcion 3</option>
+                        </select>
                       </div>
+                      <div class="col-md-6 mb-4">
+                        <select
+                          class="select"
+                          style="
+                            background-color: #060d17;
+                            color: white;
+                            border-radius: 10px;
+                            border: 0;
+                          "
+                        >
+                          <option value="1">Provincia</option>
+                          <option value="2">Opcion 1</option>
+                          <option value="3">Opcion 2</option>
+                          <option value="4">Opcion 3</option>
+                        </select>
+                      </div>
+                    </div>
 
-                      <div
-                        class="d-flex align-items-center justify-content-center pb-4"
+                    <div class="form-outline mb-4">
+                      <input
+                        type="text"
+                        class="form-control form-control-m"
+                        placeholder="email@gmail.com"
+                      />
+                      <label class="form-label ms-1">Email</label>
+                    </div>
+
+                    <div class="form-outline mb-4">
+                      <input
+                        type="text"
+                        class="form-control form-control-m"
+                        placeholder="************"
+                      />
+                      <label class="form-label ms-1">Contraseña</label>
+                    </div>
+
+                    <div class="form-outline mb-4">
+                      <input
+                        type="text"
+                        class="form-control form-control-m"
+                        placeholder="************"
+                      />
+                      <label class="form-label ms-1">Repite contraseña</label>
+                    </div>
+
+                    <div class="form-outline mb-4">
+                      <input
+                        type="text"
+                        class="form-control form-control-m"
+                        placeholder="Sheinen, Berserk, Vagabond, ..."
+                      />
+                      <label class="form-label ms-1">Genero preferido</label>
+                    </div>
+
+                    <div class="d-flex justify-content-end pt-3 pulse">
+                      <button
+                        type="button"
+                        class="btn btn-light btn-m"
+                        style="
+                          background-color: #060d17;
+                          color: white;
+                          font-weight: bold;
+                          border-radius: 30px;
+                          border: 0;
+                          width: 50%;
+                          -webkit-box-shadow: 0px 0px 25px 4px
+                            rgba(6, 13, 23, 1);
+                          -moz-box-shadow: 0px 0px 25px 4px rgba(6, 13, 23, 1);
+                          box-shadow: 0px 0px 25px 4px rgba(6, 13, 23, 1);
+                        "
                       >
-                        <a class="text-muted me-3" href="#"
-                          >¿Olvidaste la contraseña?</a
-                        >
-                        <a
-                          href="./registroBoot.html"
-                          class="btn btn-outline-danger"
-                          style="border-radius: 20px"
-                        >
-                          Crear cuenta
-                        </a>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-                <div
-                  class="col-lg-6 d-flex align-items-center gradient-custom-2"
-                >
-                  <div class="text-white px-3 py-4 p-md-5 mx-md-4">
-                    <h4 class="mb-4">
-                      Un objetivo sencillo: Simplificar la compra de mangas.
-                    </h4>
-                    <p class="small mb-0">
-                      Leer manga actualmente es una de las modas más comunes en
-                      los jóvenes y no tan jóvenes. Comprar manga puede ser muy
-                      tedioso, ya que vienen de Japón y no siempre hay stock en
-                      tiendas físicas. Nuestro objetivo es poder llegar a esas
-                      personas que se han quedado sin stock de su manga favorito
-                      o que simplemente quieren coleccionar una saga que no se
-                      distribuye en España. Como apasionado de este mundo sé lo
-                      que significa querer comprar una saga y no poder, por lo
-                      tanto, hemos abierto esta tienda con el objetivo de poder
-                      cumplir esos deseos y de promover el mundo del manga, el
-                      cual es apasionante.
-                    </p>
+                        Resetear
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-warning btn-m ms-2"
+                        style="
+                          background-color: #a309cd;
+                          color: white;
+                          font-weight: bold;
+                          border-radius: 30px;
+                          border: 0;
+                          width: 50%;
+                          -webkit-box-shadow: 0px 0px 15px 4px
+                            rgba(163, 9, 205, 1);
+                          -moz-box-shadow: 0px 0px 15px 4px rgba(163, 9, 205, 1);
+                          box-shadow: 0px 0px 15px 4px rgba(163, 9, 205, 1);
+                        "
+                      >
+                        Envíar
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
