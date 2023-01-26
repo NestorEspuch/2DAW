@@ -1,0 +1,44 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/utilities/sprites";
+
+// Define el color primario y dale el mismo tono que hicimos en la práctica 1 de Sass: #15a
+$primary: #15a;
+// El color que tendrán los link será como el que le dimos al text hover: color primario con un 10% lighten
+$link-hover-color: lighten($primary, 10%);
+
+// Create la variable de fuente para el texto que sea Georgia, 'Times New Roman', Times, serif;
+$textFont: Georgia, "Times New Roman", Times, serif;
+$font-family-base: $textFont;
+
+// Crea los iconos como hicimos en la práctica 3 de Sass
+// TODO: Recuerda hacer la importación de compass @import "compass";
+$icons: sprite-map("../icons/*.png");
+
+i {
+  background: $icons;
+  display: inline-block;
+}
+
+@each $i in sprite-names($icons) {
+  .icon-#{$i} {
+    background-position: sprite-position($icons, $i);
+    @include sprite-dimensions($icons, $i);
+  }
+}
+
+// Modifica el border-radius de los formularios a 5px
+$input-border-radius: 5px;
+// Establece el fondo del dropdown como primary
+$dropdown-bg: $primary;
+// Asigna el color blanco o uno de los del abanico de grises para los enlaces del dropdown
+$dropdown-link-color: white;
+// Asigna al dropdown el color del link-hover-color
+$dropdown-link-hover-color: $link-hover-color;
+
+// Required
+@import "../node_modules/bootstrap/scss/bootstrap";
