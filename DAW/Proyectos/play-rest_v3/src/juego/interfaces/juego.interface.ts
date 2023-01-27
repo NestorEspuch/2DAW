@@ -1,24 +1,10 @@
-enum enumTipo {
-  'rol',
-  'escape',
-  'dados',
-  'fichas',
-  'cartas',
-  'tablero',
-}
-
-interface Edicion {
-  nombre: string;
-  anyoLanzamiento: number;
-}
-
 export interface Juego {
   nombre: string;
   descripcion: string;
   edad: number;
   jugadoresPermitido: number;
-  tipo: enumTipo;
+  tipo: string;
   precio: number;
   imagen?: string;
-  ediciones: Edicion;
+  ediciones: string[];
 }

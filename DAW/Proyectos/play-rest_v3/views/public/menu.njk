@@ -2,10 +2,7 @@
     <li class="nav-item">
         <a class="nav-link text-bg-primary" aria-current="page" href="/web/contactos">Lista contactos</a>
     </li>
-    {% if (session and session.usuario) %}
-    <li class="nav-item">
-        <a class="nav-link text-bg-primary" href="/web/contactos/nuevo">Crear contacto</a>
-    </li>    
+    {% if (session and session.usuario) %}   
     <li class="nav-item">
         <a class="nav-link text-bg-primary" href="/web/logout">Cerrar sesión: {{ session.usuario }}</a>
     </li>

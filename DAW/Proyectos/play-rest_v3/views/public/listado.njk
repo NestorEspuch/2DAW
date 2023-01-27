@@ -1,9 +1,10 @@
 {% extends "base.njk" %}
-{% block titulo %}Contactos | Listado{% endblock %}
+{% block titulo %}
+    Juegos | Listado
+{% endblock %}
 {% block contenido %}
     <div class="container">
-        <h1>Lista de contactos</h1>
-        <form class="row g-3" action="/web/contactos/buscar" method="post">
+        <form class="row g-3" action="/buscar" method="post">
             <div class="col-auto">
                 <label for="textoBusqueda" class="visually-hidden">textoBusqueda</label>
                 <input type="text" name="textoBusqueda" class="form-control" id="textoBusqueda" placeholder="Contacto a buscar"></div>
@@ -11,27 +12,27 @@
                     <button type="submit" class="btn btn-primary mb-3">Buscar</button>
                 </div>
             </form>
-            {% for contacto in contactos %}
+            {% for juego in juegos %}
                 <div class="row m-1">
-                    <div class="col-6">{{ contacto.nombre }}</div>
+                    <div class="col-6">{{ juego.nombre }}</div>
                     <div class="col-auto">
-                        <a class="btn btn-success" href="/web/contactos/{{ contacto.id }}">Ver ficha</a>
+                        <a class="btn btn-success" href="/juego/{{ juego.id }}">Ver ficha</a>
                     </div>
-                    {% if (session and session.usuario)%}
+                    {% if (session and session.usuario) %}
                         <div class="col-auto">
-                            <form action="/web/contactos/borrar/{{ contacto.id }}" method="post">
+                            <form action="/juego/borrar/{{ juego.id }}" method="post">
                                 <input type="hidden" name="_method" value="delete"/>
                                 <button type="submit" class="btn btn-danger">Borrar</button>
                             </form>
                         </div>
                         <div class="col-auto">
-                            <a class="btn btn-primary" href="/web/contactos/editar/{{ contacto.id }}">Editar</a>
+                            <a class="btn btn-primary" href="/juego/editar/{{ juego.id }}">Editar</a>
                         </div>
-                    {% endif %}        
+                    {% endif %}
                 </div>
             {% else %}
                 <div class="row">
-                    <div class="col-12">No hay contactos que mostrar.</div>
+                    <div class="col-12">No hay juegos que mostrar.</div>
                 </div>
             {% endfor %}
         </div>

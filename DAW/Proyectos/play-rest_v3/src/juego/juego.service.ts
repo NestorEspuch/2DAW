@@ -7,7 +7,7 @@ import { JuegoDto } from './dto/juego-dto/juego-dto';
 @Injectable()
 export class JuegoService {
   constructor(
-    @InjectModel('Juego')
+    @InjectModel('juego')
     private readonly juegoModel: Model<Juego>,
   ) {}
 
