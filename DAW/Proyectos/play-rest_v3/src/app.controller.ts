@@ -1,37 +1,17 @@
-import { Body, Controller, Get, Post, Req, Res } from '@nestjs/common';
+import { Body, Controller, Get, Res } from '@nestjs/common';
 import { AppService } from './app.service';
 
-const usuarios = [
-  { login: 'nestor', password: 'nestor' },
-  { login: 'andres', password: 'andres' },
-];
-
-@Controller('auth')
+@Controller()
 export class AppController {
-  constructor(private readonly appServices: AppService) {}
+  constructor(private readonly appService: AppService) {}
 
-  @Post('login')
-  async login(@Res() res, @Req() req, @Body() body) {
-    const usu = body.usuario;
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const pass = body.password;
-    const existe = usuarios.filter(
-      (usuario) => usuario.login == usu && usuario,
-    );
-
-    if (existe.length > 0) {
-      req.session.usuario = existe[0].login;
-      res.listar();
-    } else {
-      res.render('iniciarSesion', {
-        error: 'Error usuario o contraseña incorrecta',
-      });
-    }
+  @Get()
+  async index(@Res() res) {
+    return res.render('base');
   }
-
-  @Get('logout')
-  async cerrarSession(@Res() res, @Req() req) {
-    req.session.destroy();
-    res.listar();
+  @Get('/buscar')
+  async listar(@Res() res, @Body() buscar: string) {
+    const resultado = await this.appService.listar(buscar);
+    if (resultado) return res.render('listado_juegos', { juegos: resultado });
   }
 }

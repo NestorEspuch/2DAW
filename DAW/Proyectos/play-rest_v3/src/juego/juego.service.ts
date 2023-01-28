@@ -1,34 +1,51 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { Juego } from './interfaces/juego.interface';
 import { JuegoDto } from './dto/juego-dto/juego-dto';
+import { Juego } from './interfaces/juego.interface';
 
 @Injectable()
 export class JuegoService {
   constructor(
-    @InjectModel('juego')
+    @InjectModel('Juego')
     private readonly juegoModel: Model<Juego>,
   ) {}
 
-  async borrar(id: string): Promise<Juego> {
-    return await this.juegoModel.findByIdAndRemove(id);
-  }
-
-  async actualizar(id: string, actualizarJuegoDto: JuegoDto): Promise<Juego> {
-    return await this.juegoModel.findByIdAndUpdate(id, actualizarJuegoDto);
-  }
-
-  async insertar(crearJuegoDto: JuegoDto): Promise<Juego> {
-    const nuevoJuego = new this.juegoModel(crearJuegoDto);
-    return await nuevoJuego.save();
-  }
-
-  async buscarPorId(id: string): Promise<Juego[]> {
-    return await this.juegoModel.findById(id);
-  }
-
   async listar(): Promise<Juego[]> {
-    return await this.juegoModel.find();
+    return await this.juegoModel.find().exec();
+  }
+  async listarId(id: string) {
+    return await this.juegoModel.findById(id).exec();
+  }
+
+  async insertar(crearContactoDto: JuegoDto): Promise<Juego> {
+    const nuevoContacto = new this.juegoModel(crearContactoDto);
+    return await nuevoContacto.save();
+  }
+
+  async actualizar(id: string, actualizarTareaDto: JuegoDto): Promise<Juego> {
+    return await this.juegoModel
+      .findByIdAndUpdate(
+        id,
+
+        {
+          $set: {
+            nombre: actualizarTareaDto.nombre,
+            descripcion: actualizarTareaDto.descripcion,
+            edad: actualizarTareaDto.edad,
+            jugadoresPermitido: actualizarTareaDto.jugadoresPermitido,
+            tipo: actualizarTareaDto.tipo,
+            precio: actualizarTareaDto.precio,
+            imagen: actualizarTareaDto.imagen,
+            ediciones: actualizarTareaDto.ediciones,
+          },
+        },
+        { new: true, runValidators: true },
+      )
+      .exec();
+  }
+
+  async borrar(id: string): Promise<Juego> {
+    return await this.juegoModel.findByIdAndDelete(id).exec();
   }
 }

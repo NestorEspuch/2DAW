@@ -1,0 +1,189 @@
+header
+  display: flex
+  align-items: center
+  justify-content: space-between
+  font-size: 15px
+  height: 6em
+
+  // -webkit-box-shadow: 0px 10px 14px -12px rgba(18, 28, 41, 1);
+  // -moz-box-shadow: 0px 10px 14px -12px rgba(18, 28, 41, 1);
+  // box-shadow: 0px 10px 14px -12px rgba(18, 28, 41, 1);
+
+  .logoNombreHeader
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    margin-left: 2em
+    margin-bottom: 0.5rem
+    font-size: 20px
+
+    img
+      &:hover
+        +animationRotation
+
+    a
+      .logoHeader
+        width: 55px
+        height: 55px
+        margin-top: 1.4em
+        margin-right: 0.5rem
+
+    h1
+      a
+        color: $colorPrincipal
+
+  .menu
+    height: 45px
+
+    ul
+      margin: 0 auto
+      padding: 0
+      list-style: none
+      width: 100%
+
+      &.submenu
+        height: auto
+        overflow: hidden
+        width: 170px
+        background: $colorFondoPrincipal
+        position: absolute
+        z-index: 99
+        display: none
+
+        li
+          display: block
+          width: 100%
+
+        a
+          color: $colorPalabras
+
+          &:hover
+            background: $colorFondoSegundario
+            color: $colorPalabras
+
+    li
+      margin: 0 auto
+      padding: 0
+      list-style: none
+      float: left
+      display: inline
+      position: relative
+
+      &:hover ul.submenu
+        display: block
+
+    a
+      display: block
+      line-height: 45px
+      margin: 0 0.7em
+      text-decoration: none
+      color: $colorPalabras
+      font-size: 16px
+
+      &.dropdown-arrow:after
+        content: "\25BE"
+        margin-left: 5px
+
+  .inputHeader
+    .buscarIndex
+      background-color: $colorFondoSegundario
+      width: 25em
+      height: 2em
+      border-radius: 15px
+      border: 0
+      position: relative
+      margin-right: 0.5em
+      color: $colorPalabras
+
+    .lupaHeader
+      padding: 0.25em 0.6em
+      border: 1px solid wheat
+      text-align: center
+      box-shadow: 0 2px 3px white
+      width: 30%
+
+  .carritoHeader
+    margin-right: 2em
+
+    &:hover
+      +animationHoverManga
+
+    .imgCarritoHeader
+      width: 20px
+      margin-right: 0.5em
+
+    a.textCarrito
+      font-size: 18px
+
+  +responsive(1400)
+    .buscarIndex
+      width: 35em !important
+
+    .logoNombreHeader
+      margin-left: 4em
+
+      a
+        .logoHeader
+          width: 65px
+          height: 65px
+
+      h1
+        a
+          font-size: 1.2em !important
+
+    .carritoHeader
+      margin-right: 4em
+
+
+  +responsive(1200)
+    .tituloHeader
+      display: none
+
+    .buscarIndex
+      width: 20em !important
+
+    .logoHeader
+      margin-top: 0.8em !important
+
+
+  +responsive(900)
+    .tituloHeader
+      display: none
+
+    .buscarIndex
+      width: 10em !important
+
+    .logoHeader
+      margin-top: 0.8em !important
+
+
+  +responsive(750)
+    .textCarrito,
+    .inputHeader,
+    .tituloHeader
+      display: none
+
+    .logoHeader
+      margin-top: 0.8em !important
+
+
+  +responsive(550)
+    .imgCarritoHeader,
+    .textCarrito,
+    .tituloHeader,
+    .inputHeader
+      display: none
+
+
+  +responsive(500)
+    .carritoHeader,
+    .logoNombreHeader,
+    .inputHeader
+      display: none
+
+    .enlacesNav
+      margin: 0 0.6em !important
+      font-size: 1.1em !important
+
+    .menuPrincipal
+      margin-left: 1em !important

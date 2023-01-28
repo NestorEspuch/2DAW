@@ -1,58 +1,36 @@
-import {
-  Body,
-  Controller,
-  Delete,
-  Get,
-  Param,
-  Post,
-  Put,
-  Res,
-  UseGuards,
-} from '@nestjs/common';
-import { JwtAuthGuard } from 'src/auth/guard/jwt-auth/jwt-auth.guard';
-import { UsuarioDto } from './dto/usuario-dto/usuario-dto';
-import { UsuarioService } from './usuario.service';
+import { Body, Controller, Get, Post, Req, Res } from '@nestjs/common';
+import { AppService } from 'src/app.service';
 
-@Controller('usuario')
-export class UsuarioController {
-  constructor(private readonly usuarioService: UsuarioService) {}
+const usuarios = [
+  { login: 'nestor', password: 'nestor' },
+  { login: 'andres', password: 'andres' },
+];
 
-  // GET /auth/login
-  @Get('usuario')
-  async listar(@Res() res) {
-    const resultado = await this.usuarioService.listar();
-    return res.render('auth_login', { usuarios: resultado });
-  }
+@Controller('auth')
+export class AppController {
+  constructor(private readonly appServices: AppService) {}
 
-  // GET /usuario/buscar/:id
-  @Get('buscar/:id')
-  async buscarPorId(@Param('id') id: string) {
-    try {
-      const resultado = await this.usuarioService.buscarPorId(id);
-      if (resultado) return { resultado: resultado };
-      throw new Error();
-    } catch (Error) {
-      return { error: 'Error buscando al usuario' };
+  @Post('login')
+  async login(@Res() res, @Req() req, @Body() body) {
+    const usu = body.usuario;
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const pass = body.password;
+    const existe = usuarios.filter(
+      (usuario) => usuario.login == usu && usuario,
+    );
+
+    if (existe.length > 0) {
+      req.session.usuario = existe[0].login;
+      res.listar();
+    } else {
+      res.render('iniciarSesion', {
+        error: 'Error usuario o contraseña incorrecta',
+      });
     }
   }
-  // POST /usuario
-  @Post()
-  @UseGuards(JwtAuthGuard)
-  async crear(@Body() crearUsuarioDto: UsuarioDto) {
-    return this.usuarioService.insertar(crearUsuarioDto);
-  }
 
-  // PUT /contacto/:id
-  @Put(':id')
-  actualizar(
-    @Param('id') id: string,
-    @Body() actualizarUsuarioDto: UsuarioDto,
-  ) {
-    return this.usuarioService.actualizar(id, actualizarUsuarioDto);
-  }
-  // DELETE /contacto/:id
-  @Delete(':id')
-  borrar(@Param('id') id: string) {
-    return this.usuarioService.borrar(id);
+  @Get('logout')
+  async cerrarSession(@Res() res, @Req() req) {
+    req.session.destroy();
   }
 }

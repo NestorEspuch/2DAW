@@ -3,15 +3,15 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { JuegoModule } from './juego/juego.module';
+import { JuegoSchema } from './juego/schemas/juego.schema';
 import { UsuarioModule } from './usuario/usuario.module';
-import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
+    MongooseModule.forFeature([{ name: 'Juego', schema: JuegoSchema }]),
     JuegoModule,
-    UsuarioModule,
+    // UsuarioModule,
     MongooseModule.forRoot('mongodb://localhost:27017/playRest_v3'),
-    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],

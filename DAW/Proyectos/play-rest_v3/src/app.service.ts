@@ -6,11 +6,15 @@ import { Usuario } from './usuario/interfaces/usuario.interface';
 @Injectable()
 export class AppService {
   constructor(
-    @InjectModel('auth')
+    @InjectModel('Juego')
     private readonly usuarioModel: Model<Usuario>,
   ) {}
 
-  async listar(): Promise<Usuario[]> {
-    return await this.usuarioModel.find();
+  async listar(id?: string): Promise<Usuario[]> {
+    if (!id) {
+      return await this.usuarioModel.find();
+    } else {
+      return await this.usuarioModel.findById(id);
+    }
   }
 }

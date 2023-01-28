@@ -29,6 +29,10 @@ export const JuegoSchema = new mongoose.Schema({
     min: 0,
     max: 100,
   },
+  jugadoresPermitido: {
+    type: Number,
+    required: true,
+  },
   tipo: {
     type: String,
     enum: ['rol', 'escape', 'dados', 'fichas', 'cartas', 'tablero'],
