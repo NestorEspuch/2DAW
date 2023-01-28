@@ -10,11 +10,16 @@
       content="Un objetivo sencillo: simplificar la compra de mangas"
     />
     <!-- Funte SourceSansPro google -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- Funte SourceSansPro google -->
-    
+
     <link rel="shortcut icon" href="../img/favicon.ico" />
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css" />
     <title>MangaStore</title>
   </head>
   <body>
@@ -35,7 +40,9 @@
       <!-- Enlaces -->
       <nav class="menu">
         <ul class="menuPrincipal">
-          <li class="enlaces"><a class="enlacesNav" href="../index.html">Inicio</a></li>
+          <li class="enlaces">
+            <a class="enlacesNav" href="../index.html">Inicio</a>
+          </li>
           <li class="dropdown-arrow enlaces">
             <a class="enlacesNav" href="#">Categorias</a>
             <ul class="submenu">
@@ -44,13 +51,17 @@
               <li><a href="../src/categorias.html">Intriga</a></li>
               <li><a href="../src/categorias.html">Acción</a></li>
               <li><a href="../src/categorias.html">Sobrenatural</a></li>
-              <li><a href="../src/categorias.html">Colegios y Universidad</a></li>
+              <li>
+                <a href="../src/categorias.html">Colegios y Universidad</a>
+              </li>
               <li><a href="../src/categorias.html">Shonen</a></li>
               <li><a href="../src/categorias.html">Sheinen</a></li>
               <li><a href="../src/categorias.html">Aventura</a></li>
             </ul>
           </li>
-          <li class="enlaces"><a class="enlacesNav" href="contacto.html">Contacto</a></li>
+          <li class="enlaces">
+            <a class="enlacesNav" href="contacto.html">Contacto</a>
+          </li>
           <li class="enlaces">
             <a class="enlacesNav" href="sobreNosotros.html">Sobre nosotros</a>
           </li>
@@ -60,12 +71,7 @@
 
       <!-- Buscador -->
       <form class="inputHeader">
-        <input
-          type="search"
-          name="buscar"
-          class="buscarIndex"
-          placeholder="   &#128270    Búsqueda de Manga o Manwa"
-        />
+        <input type="search" name="buscar" class="buscarIndex"  placeholder="   &#128270    Búsqueda de Manga o Manwa"/>
         <!-- Icono lupa -->
 
         <!-- <img
@@ -79,13 +85,12 @@
 
       <!-- Carrito -->
       <div class="carritoHeader">
-        <a href="carritoBoot.html"
+        <a href=" carritoBoot.html"
           ><img
             src="../img/Iconos/icono_Carrito.png"
             alt="Carrito"
             class="imgCarritoHeader"
         /></a>
-        <a href="carritoBoot.html" class="textCarrito">Carrito (0)</a>
       </div>
       <!-- /Carrito -->
       <!-- /Barra navegación -->
@@ -139,7 +144,9 @@
           </select>
           <!-- /Filtro Orden -->
           <!-- Boton filtrar -->
-          <button type="submit" class="categoriaBoton" name="botonFiltrar">FILTRAR</button>
+          <button type="submit" class="categoriaBoton" name="botonFiltrar">
+            FILTRAR
+          </button>
           <!-- /Boton filtrar -->
         </form>
       </div>
@@ -147,46 +154,143 @@
       <!-- Div Carrusel -->
       <div class="carousel">
         <div class="carousel-inner">
-            <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
-            <div class="carousel-item">
-                <a href="descripcion_Chainsawman.html"><img src="../img/Mangas/Portada_Chainsawman.jpg"></a>
-                <a href="descripcion_Bluelock.html"><img src="../img/Mangas/Portada_Bluelock.jpg"></a>
-                <a href="descripcion_Berserk.html"><img src="../img/Mangas/Portada_Bersek.jpg"></a>
-                <a href="descripcion_FireForce.html"><img src="../img/Mangas/Portada_FireForce.jpg"></a>
-            </div>
-            <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
-            <div class="carousel-item">
-              <a href="descripcion_DeathNote.html"><img src="../img/Mangas/Portada_DeathNote.jpg"></a>
-              <a href="descripcion_HxH.html"><img src="../img/Mangas/Portada_HunterxHunter.jpg"></a>
-              <a href="descripcion_SoloLeveling.html"><img src="../img/Mangas/Portada_Sololeveling.jpeg"></a>
-              <a href="descripcion_TokyoGhoul.html"><img src="../img/Mangas/Portada_TokyoGhoul.jpg"></a>
-            </div>
-            <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
-            <div class="carousel-item">
-              <a href="descripcion_Jujutsu.html"><img src="../img/Mangas/Portada_JujutsuKaisen.jpg"></a>
-              <a href="descripcion_Dorohedoro.html"><img src="../img/Mangas/Portada_Dorohedoro.jpg"></a>
-              <a href="descripcion_OnePiece.html"><img src="../img/Mangas/Portada_Onepiece.jpg"></a>
-              <a href="descripcion_Vagabond.html"><img src="../img/Mangas/Portada_Vagabond.jpg"></a>
-            </div>
-            <label for="carousel-3" class="carousel-control prev control-1">‹</label>
-            <label for="carousel-2" class="carousel-control next control-1">›</label>
-            <label for="carousel-1" class="carousel-control prev control-2">‹</label>
-            <label for="carousel-3" class="carousel-control next control-2">›</label>
-            <label for="carousel-2" class="carousel-control prev control-3">‹</label>
-            <label for="carousel-1" class="carousel-control next control-3">›</label>
-            <ol class="carousel-indicators">
-                <li>
-                    <label for="carousel-1" class="carousel-bullet">•</label>
-                </li>
-                <li>
-                    <label for="carousel-2" class="carousel-bullet">•</label>
-                </li>
-                <li>
-                    <label for="carousel-3" class="carousel-bullet">•</label>
-                </li>
-            </ol>
+          <input
+            class="carousel-open"
+            type="radio"
+            id="carousel-1"
+            name="carousel"
+            aria-hidden="true"
+            hidden=""
+            checked="checked"
+          />
+          <div class="carousel-item">
+            <a href="descripcion_Chainsawman.html"
+              ><figure>
+                <img src="../img/Mangas/Portada_Chainsawman.jpg" />
+                <figcaption>Chainsawman</figcaption>
+                <time>28-01</time>
+              </figure></a
+            >
+            <a href="descripcion_Bluelock.html"
+              ><figure>
+                <img src="../img/Mangas/Portada_Bluelock.jpg"/>  
+                <figcaption>Bluelock</figcaption>
+                <time>28-01</time>
+              </figure></a>
+            <a href="descripcion_Berserk.html"
+              ><figure>
+                <img src="../img/Mangas/Portada_Bersek.jpg"/>  
+                <figcaption>Berserk</figcaption>
+                <time>28-01</time>
+              </figure>
+            </a>
+            <a href="descripcion_FireForce.html"
+              ><figure>
+                <img src="../img/Mangas/Portada_FireForce.jpg"/>  
+                <figcaption>Fire Force</figcaption>
+                <time>28-01</time>
+              </figure>
+            </a>
+          </div>
+          <input
+            class="carousel-open"
+            type="radio"
+            id="carousel-2"
+            name="carousel"
+            aria-hidden="true"
+            hidden=""
+          />
+          <div class="carousel-item">
+            <a href="descripcion_DeathNote.html"
+              ><figure>
+                <img src="../img/Mangas/Portada_DeathNote.jpg"/>  
+                <figcaption>Death Note</figcaption>
+                <time>28-01</time>
+              </figure></a>
+            <a href="descripcion_HxH.html"
+              ><figure>
+                <img src="../img/Mangas/Portada_HunterxHunter.jpg"/>  
+                <figcaption>Hunter x Hunter</figcaption>
+                <time>28-01</time>
+              </figure></a>
+            <a href="descripcion_SoloLeveling.html"
+              ><figure>
+                <img src="../img/Mangas/Portada_Sololeveling.jpeg"/>  
+                <figcaption>Solo Leveling</figcaption>
+                <time>28-01</time>
+              </figure></a>
+            <a href="descripcion_TokyoGhoul.html"
+              ><figure>
+                <img src="../img/Mangas/Portada_TokyoGhoul.jpg"/>  
+                <figcaption>Tokyo Ghoul</figcaption>
+                <time>28-01</time>
+              </figure></a>
+          </div>
+          <input
+            class="carousel-open"
+            type="radio"
+            id="carousel-3"
+            name="carousel"
+            aria-hidden="true"
+            hidden=""
+          />
+          <div class="carousel-item">
+            <a href="descripcion_Jujutsu.html"
+              ><figure>
+                <img src="../img/Mangas/Portada_JujutsuKaisen.jpg"/>  
+                <figcaption>Jujutsu Kaisen</figcaption>
+                <time>28-01</time>
+              </figure></a>
+            <a href="descripcion_Dorohedoro.html"
+              ><figure>
+                <img src="../img/Mangas/Portada_Dorohedoro.jpg"/>  
+                <figcaption>Dorohedoro</figcaption>
+                <time>28-01</time>
+              </figure></a>
+            <a href="descripcion_OnePiece.html"
+              ><figure>
+                <img src="../img/Mangas/Portada_Onepiece.jpg"/>  
+                <figcaption>One Piece</figcaption>
+                <time>28-01</time>
+              </figure></a>
+            <a href="descripcion_Vagabond.html"
+              ><figure>
+                <img src="../img/Mangas/Portada_Vagabond.jpg"/>  
+                <figcaption>Vagabond</figcaption>
+                <time>28-01</time>
+              </figure></a>
+          </div>
+          <label for="carousel-3" class="carousel-control prev control-1"
+            >‹</label
+          >
+          <label for="carousel-2" class="carousel-control next control-1"
+            >›</label
+          >
+          <label for="carousel-1" class="carousel-control prev control-2"
+            >‹</label
+          >
+          <label for="carousel-3" class="carousel-control next control-2"
+            >›</label
+          >
+          <label for="carousel-2" class="carousel-control prev control-3"
+            >‹</label
+          >
+          <label for="carousel-1" class="carousel-control next control-3"
+            >›</label
+          >
+          <ol class="carousel-indicators">
+            <li>
+              <label for="carousel-1" class="carousel-bullet">•</label>
+            </li>
+            <li>
+              <label for="carousel-2" class="carousel-bullet">•</label>
+            </li>
+            <li>
+              <label for="carousel-3" class="carousel-bullet">•</label>
+            </li>
+          </ol>
         </div>
-    </div>
+      </div>
       <!-- /Div Carrusel -->
     </main>
     <!-- /Contendor principal -->
@@ -204,23 +308,36 @@
       <ul class="iconosPie">
         <li class="enlacesIconosPie">
           <a
-            href="https://www.instagram.com/nestorespuch15/?hl=es" target="_blank"
-            ><img src="../img/Iconos/icono_Instagram.png" alt="Instagram" class="iconoPie"
+            href="https://www.instagram.com/nestorespuch15/?hl=es"
+            target="_blank"
+            ><img
+              src="../img/Iconos/icono_Instagram.png"
+              alt="Instagram"
+              class="iconoPie"
           /></a>
         </li>
         <li class="enlacesIconosPie">
           <a href="https://www.linkedin.com/in/nestorespuch/" target="_blank"
-            ><img src="../img/Iconos/icono_Linkdln.png" alt="LinkdIn" class="iconoPie"
+            ><img
+              src="../img/Iconos/icono_Linkdln.png"
+              alt="LinkdIn"
+              class="iconoPie"
           /></a>
         </li>
         <li class="enlacesIconosPie">
           <a href="https://twitter.com/nestorespuch15" target="_blank"
-            ><img src="../img/Iconos/icono_Twitter.png" alt="Twitter" class="iconoPie"
+            ><img
+              src="../img/Iconos/icono_Twitter.png"
+              alt="Twitter"
+              class="iconoPie"
           /></a>
         </li>
         <li class="enlacesIconosPie">
           <a href="https://github.com/NestorEspuch" target="_blank"
-            ><img src="../img/Iconos/icono_GitHub.png" alt="GitHUb" class="iconoPie"
+            ><img
+              src="../img/Iconos/icono_GitHub.png"
+              alt="GitHUb"
+              class="iconoPie"
           /></a>
         </li>
       </ul>

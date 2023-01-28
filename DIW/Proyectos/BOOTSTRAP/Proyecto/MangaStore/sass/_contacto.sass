@@ -12,13 +12,15 @@
   //filter:brightness(0.4);
 
   width: 30em
-  height: 40em
+  height: 43em
   border-radius: 30px
   margin: auto
   margin-bottom: 3em
-  -webkit-box-shadow: 0px 0px 9px 3px rgba(148, 148, 148, 0.2)
-  -moz-box-shadow: 0px 0px 9px 3px rgba(148, 148, 148, 0.2)
-  box-shadow: 0px 0px 9px 3px rgba(148, 148, 148, 0.2)
+  margin-top: 3em
+  -webkit-box-shadow: 0 0 30px darken($colorPalabras, 20%)
+  -moz-box-shadow: 0 0 30px darken($colorPalabras, 20%)
+  box-shadow: 0 0 30px darken($colorPalabras, 20%)
+  border: 5px ridge darken($colorPalabras, 20%)
 
   #formularioContacto
     text-align: center
@@ -27,11 +29,14 @@
       color: $colorPalabras
       padding: 0.5em
       font-weight: bold
-      -webkit-text-shadow: 0px 0px 8px #4f4f66
-      -moz-text-shadow: 0px 0px 8px #4f4f66
-      text-shadow: 0px 0px 8px #4f4f66
+      font-size: 3em
+      font-family: "Aboreto", cursive
+      margin: 0.5em
+      -webkit-text-shadow: 0px 0px 10px darken($colorPalabras, 60%)
+      -moz-text-shadow: 0px 0px 10px darken($colorPalabras, 60%)
+      text-shadow: 0px 0px 10px darken($colorPalabras, 60%)
 
-    input
+    %inputTextArea
       background-color: $colorFondoPrincipal
       border-radius: 10px
       width: 30em
@@ -39,36 +44,33 @@
       margin-bottom: 1em
       border: 0
       color: $colorPalabras
-      -webkit-box-shadow: 0px 0px 9px 3px rgba(148, 148, 148, 0.2)
-      -moz-box-shadow: 0px 0px 9px 3px rgba(148, 148, 148, 0.2)
-      box-shadow: 0px 0px 9px 3px rgba(148, 148, 148, 0.2)
+      -webkit-box-shadow: 0 0 50px darken($colorPalabras, 60%)
+      -moz-box-shadow: 0 0 50px darken($colorPalabras, 60%)
+      box-shadow: 0 0 50px darken($colorPalabras, 60%)
+      border: 2px inset darken($colorPalabras, 25%)
 
       &::placeholder
         color: $colorPalabras
+        opacity: 0.3
         font-weight: bold
         margin-left: 10px
 
-    textarea
-      background-color: $colorFondoPrincipal
-      border-radius: 10px
-      width: 30em
-      height: 20em
-      margin-bottom: 1em
-      border: 0
-      color: $colorPalabras
-      -webkit-box-shadow: 0px 0px 9px 3px rgba(148, 148, 148, 0.2)
-      -moz-box-shadow: 0px 0px 9px 3px rgba(148, 148, 148, 0.2)
-      box-shadow: 0px 0px 9px 3px rgba(148, 148, 148, 0.2)
+    input
+      @extend %inputTextArea
 
-      &::placeholder
-        color: $colorPalabras
-        font-weight: bold
+    textarea
+      @extend %inputTextArea
+
+      height: 20em
 
     #enviar
       text-align: center
       color: $colorPalabras
       height: 3em
       font-weight: bold
+      -webkit-box-shadow: 0 0 50px darken($colorPalabras, 60%)
+      -moz-box-shadow: 0 0 50px darken($colorPalabras, 60%)
+      box-shadow: 0 0 50px darken($colorPalabras, 60%)
 
       &:hover
         +animationHoverManga
@@ -103,21 +105,21 @@
     width: 100px
     height: 100px
     left: 21em
-    top: 5em
+    top: 6em
 
   #circulo8
     background: $colorPrincipal
     width: 50px
     height: 50px
     left: 20em
-    top: 6em
+    top: 7em
 
   #circulo9
     background: $colorFondoSegundario
     width: 25px
     height: 25px
     left: 19.5em
-    top: 8em
+    top: 9em
 
   // /Izquierda sin color
 
@@ -156,7 +158,7 @@
     +responsive(1100px)
       display: none
 
-+responsive(500)
++responsive(500px)
   #mainContacto
     width: 80%
     padding-top: 1.5em

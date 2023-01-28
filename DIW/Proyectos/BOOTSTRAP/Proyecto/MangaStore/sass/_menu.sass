@@ -5,9 +5,12 @@ header
   font-size: 15px
   height: 6em
 
-  // -webkit-box-shadow: 0px 10px 14px -12px rgba(18, 28, 41, 1);
-  // -moz-box-shadow: 0px 10px 14px -12px rgba(18, 28, 41, 1);
-  // box-shadow: 0px 10px 14px -12px rgba(18, 28, 41, 1);
+  $colorBordeBottom: lighten($colorFondoSegundario, 20%)
+
+  border-bottom: 1px solid $colorBordeBottom
+  -webkit-box-shadow: 0px 2px 5px 0px $colorBordeBottom
+  -moz-box-shadow: 0px 2px 5px 0px $colorBordeBottom
+  box-shadow: 0px 2px 5px 0px $colorBordeBottom
 
   .logoNombreHeader
     display: flex
@@ -46,6 +49,8 @@ header
         overflow: hidden
         width: 170px
         background: $colorFondoPrincipal
+        border: 1px solid $colorBordeBottom
+        border-radius: 10px
         position: absolute
         z-index: 99
         display: none
@@ -56,6 +61,9 @@ header
 
         a
           color: $colorPalabras
+          margin: 0
+          padding-left: 5px
+          padding-right: 5px
 
           &:hover
             background: $colorFondoSegundario
@@ -115,7 +123,7 @@ header
     a.textCarrito
       font-size: 18px
 
-  +responsive(1400)
+  +responsive(1400px)
     .buscarIndex
       width: 35em !important
 
@@ -135,7 +143,7 @@ header
       margin-right: 4em
 
 
-  +responsive(1200)
+  +responsive(1200px)
     .tituloHeader
       display: none
 
@@ -146,7 +154,7 @@ header
       margin-top: 0.8em !important
 
 
-  +responsive(900)
+  +responsive(900px)
     .tituloHeader
       display: none
 
@@ -157,7 +165,7 @@ header
       margin-top: 0.8em !important
 
 
-  +responsive(750)
+  +responsive(750px)
     .textCarrito,
     .inputHeader,
     .tituloHeader
@@ -167,7 +175,7 @@ header
       margin-top: 0.8em !important
 
 
-  +responsive(550)
+  +responsive(550px)
     .imgCarritoHeader,
     .textCarrito,
     .tituloHeader,
@@ -175,7 +183,7 @@ header
       display: none
 
 
-  +responsive(500)
+  +responsive(500px)
     .carritoHeader,
     .logoNombreHeader,
     .inputHeader

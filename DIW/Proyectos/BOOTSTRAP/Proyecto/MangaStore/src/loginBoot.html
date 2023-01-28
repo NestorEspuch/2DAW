@@ -32,6 +32,24 @@
     <link rel="shortcut icon" href="../img/favicon.ico" />
     <!-- <link rel="stylesheet" href="../css/style.css" /> -->
 
+    <style>
+      .modal-body {
+        color: #060d17;
+      }
+      .modal-header {
+        background-color: #23282e;
+        color: white;
+      }
+      #recipient-email {
+        background-color: white;
+        border: 1px solid #060d17;
+      }
+      #message-text {
+        background-color: white;
+        border: 1px solid #060d17;
+      }
+    </style>
+
     <title>MangaStore</title>
   </head>
   <body>
@@ -49,7 +67,7 @@
               data-mdb-animation="pulse"
               data-mdb-animation-start="onHover"
           /></a>
-          <a class="navbar-brand" href="#">MangaStore</a>
+          <a class="navbar-brand" href="../index.html">MangaStore</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -138,26 +156,25 @@
                 type="search"
                 placeholder="Busqueda de Manga o Manhwa"
                 aria-label="Search"
-                style="background-color: #23282e !important; color: white;"
+                style="background-color: #23282e !important; color: white"
               />
             </form>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-cart"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
-              />
-            </svg>
+
             <a
               href="carritoBoot.html"
               style="text-decoration: none; color: white"
-              >Carrito(0)</a
-            >
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-cart"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+                /></svg
+            ></a>
             <p class="m-3 d-none d-md-none d-lg-block">|</p>
             <a href="loginBoot.html" style="color: white">
               <svg
@@ -262,9 +279,92 @@
                       <div
                         class="d-flex align-items-center justify-content-center pb-4"
                       >
-                        <a class="text-muted me-3" href="#"
+                        <a
+                          class="text-muted me-3"
+                          data-bs-toggle="modal"
+                          data-bs-target="#exampleModal"
+                          data-bs-whatever="mangastore@recuperacion.com"
                           >¿Olvidaste la contraseña?</a
                         >
+                        <div
+                          class="modal fade"
+                          id="exampleModal"
+                          tabindex="-1"
+                          aria-labelledby="exampleModalLabel"
+                          aria-hidden="true"
+                        >
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">
+                                  Recuperar Contraseña
+                                </h5>
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                  style="color: white !important"
+                                ></button>
+                              </div>
+                              <div class="modal-body">
+                                <form>
+                                  <div class="mb-3">
+                                    <label
+                                      for="recipient-email"
+                                      class="col-form-label"
+                                      >Email:</label
+                                    >
+                                    <input
+                                      type="email"
+                                      class="form-control"
+                                      id="recipient-email"
+                                    />
+                                  </div>
+                                  <div class="mb-3">
+                                    <label
+                                      for="message-text"
+                                      class="col-form-label"
+                                      >Mensaje:</label
+                                    >
+                                    <textarea
+                                      class="form-control"
+                                      id="message-text"
+                                    ></textarea>
+                                  </div>
+                                </form>
+                              </div>
+                              <div class="modal-footer"">
+                                <button
+                                  type="button"
+                                  class="btn btn-block btn-lg"
+                                  style="
+                                    color: white;
+                                    background-color: #060d17;
+                                    border-radius: 30px;
+                                    border: 0;
+                                    width: 48%;
+                                  "
+                                >
+                                  Cerrar
+                                </button>
+                                <button
+                                  type="button"
+                                  class="btn btn-block btn-lg"
+                                  style="
+                                    color: white;
+                                    background-color: #a309cd;
+                                    border-radius: 30px;
+                                    border: 0;
+                                    width: 48%;
+                                  "
+                                >
+                                  Envíar mensaje
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                         <a
                           href="./registroBoot.html"
                           class="btn btn-outline-danger"

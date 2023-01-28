@@ -71,32 +71,16 @@
     opacity: 1
 
 =responsive($size)
-  @if $size == 500
-    @media screen and (max-width: 500px)
-      @content
-
-  @if $size == 550
-    @media screen and (max-width: 550px)
-      @content
-
-  @if $size == 750
-    @media screen and (max-width: 750px)
-      @content
-
-  @if $size == 900
-    @media screen and (max-width: 900px)
-      @content
-
-  @if $size == 1200
-    @media screen and (max-width: 1200px)
-      @content
-
-  @if $size == 1400
-    @media screen and (min-width: 1400px)
-      @content
-  @else
+  @if $size < 1400
     @media screen and (max-width: $size)
       @content
+  @else
+    @media screen and (min-width: 1400px)
+      @content
+
+=valores($value...)
+  @for $value from a to 3
+    background-color: lighten($base-color, $i * 5%)
 
 =animacionBolas
   -webkit-animation-name: rubberBand

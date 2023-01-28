@@ -10,11 +10,16 @@
       content="Un objetivo sencillo: simplificar la compra de mangas"
     />
     <!-- Funte SourceSansPro google -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- Funte SourceSansPro google -->
-    
+
     <link rel="shortcut icon" href="../img/favicon.ico" />
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css" />
     <title>MangaStore</title>
   </head>
   <body>
@@ -35,22 +40,28 @@
       <!-- Enlaces -->
       <nav class="menu">
         <ul class="menuPrincipal">
-          <li class="enlaces"><a class="enlacesNav" href="../index.html">Inicio</a></li>
+          <li class="enlaces">
+            <a class="enlacesNav" href="../index.html">Inicio</a>
+          </li>
           <li class="dropdown-arrow enlaces">
             <a class="enlacesNav" href="#">Categorias</a>
             <ul class="submenu">
               <li><a href="../src/categorias.html">Fantasía</a></li>
-                <li><a href="../src/categorias.html">Terror</a></li>
-                <li><a href="../src/categorias.html">Intriga</a></li>
-                <li><a href="../src/categorias.html">Acción</a></li>
-                <li><a href="../src/categorias.html">Sobrenatural</a></li>
-                <li><a href="../src/categorias.html">Colegios y Universidad</a></li>
-                <li><a href="../src/categorias.html">Shonen</a></li>
-                <li><a href="../src/categorias.html">Sheinen</a></li>
-                <li><a href="../src/categorias.html">Aventura</a></li>
+              <li><a href="../src/categorias.html">Terror</a></li>
+              <li><a href="../src/categorias.html">Intriga</a></li>
+              <li><a href="../src/categorias.html">Acción</a></li>
+              <li><a href="../src/categorias.html">Sobrenatural</a></li>
+              <li>
+                <a href="../src/categorias.html">Colegios y Universidad</a>
+              </li>
+              <li><a href="../src/categorias.html">Shonen</a></li>
+              <li><a href="../src/categorias.html">Sheinen</a></li>
+              <li><a href="../src/categorias.html">Aventura</a></li>
             </ul>
           </li>
-          <li class="enlaces"><a class="enlacesNav" href="contacto.html">Contacto</a></li>
+          <li class="enlaces">
+            <a class="enlacesNav" href="contacto.html">Contacto</a>
+          </li>
           <li class="enlaces">
             <a class="enlacesNav" href="sobreNosotros.html">Sobre nosotros</a>
           </li>
@@ -60,12 +71,7 @@
 
       <!-- Buscador -->
       <form class="inputHeader">
-        <input
-          type="search"
-          name="buscar"
-          class="buscarIndex"
-          placeholder="   &#128270    Búsqueda de Manga o Manwa"
-        />
+        <input type="search" name="buscar" class="buscarIndex" placeholder="   &#128270    Búsqueda de Manga o Manwa" />
         <!-- Icono lupa -->
 
         <!-- <img
@@ -79,13 +85,12 @@
 
       <!-- Carrito -->
       <div class="carritoHeader">
-        <a href="carritoBoot.html"
+        <a href="carrito.html"
           ><img
             src="../img/Iconos/icono_Carrito.png"
             alt="Carrito"
             class="imgCarritoHeader"
         /></a>
-        <a href="carritoBoot.html" class="textCarrito">Carrito (0)</a>
       </div>
       <!-- /Carrito -->
       <!-- /Barra navegación -->
@@ -96,7 +101,7 @@
       <!-- Contenedor izquierda -->
       <div id="sobreNosotrosIzquierda">
         <div>
-          <h1>Un objetivo sencillo:</h1>
+          <h1>Un objetivo sencillo</h1>
           <h1>Simplificar la compra de mangas.</h1>
           <p>
             Leer manga actualmente es una de las modas más comunes en los
@@ -112,7 +117,7 @@
           </p>
         </div>
         <!-- Datos empresa -->
-        <div>
+        <address>
           <ul>
             <li>Vendedor</li>
             <li>MangaStore España S.A.U.</li>
@@ -127,22 +132,46 @@
             <li>Folio 107. Hoja 10.921.</li>
             <li>Inscripción 1ª</li>
           </ul>
-        </div>
+        </address>
         <!-- /Datos empresa -->
       </div>
       <!-- /Contenedor izquierda -->
       <!-- Contenedor derecha -->
       <div id="sobreNosotrosDerecha">
         <img src="../img/utiles/Guts.png" alt="Guts - Berserk" />
-        <p>
+        <cite>
           NÉSTOR ESPUCH <br />
-          Pd: Guts - Berserk (personaje favorito).
-        </p>
+          <small>Pd: Guts - Berserk (personaje favorito).</small>
+        </cite>
       </div>
       <!-- /Contenedor derecha -->
     </main>
     <!-- /Contendor principal -->
-
+    <details>
+      <summary>
+        <div class="botonModal">
+          Registrate a nuestro newsletter
+        </div>
+        <div class="detallesModalOverlay"></div>
+      </summary>
+      <div class="detallesModal">
+        <div class="detallesModalCerrado">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.7071 1.70711C14.0976 1.31658 14.0976 0.683417 13.7071 0.292893C13.3166 -0.0976311 12.6834 -0.0976311 12.2929 0.292893L7 5.58579L1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L5.58579 7L0.292893 12.2929C-0.0976311 12.6834 -0.0976311 13.3166 0.292893 13.7071C0.683417 14.0976 1.31658 14.0976 1.70711 13.7071L7 8.41421L12.2929 13.7071C12.6834 14.0976 13.3166 14.0976 13.7071 13.7071C14.0976 13.3166 14.0976 12.6834 13.7071 12.2929L8.41421 7L13.7071 1.70711Z" fill="black" />
+          </svg>
+        </div>
+        <div class="detallesModalTitulo">
+          <h1>Suscribete a nuestro newsletter</h1>
+          <p>¡Obtendrás ofertas y noticias sobre nuestras nuevas!</p>
+        </div>
+        <div class="detallesModalContenido">
+          <form>
+            <input type="email" name="emailModal" id="emailModal" placeholder="email@gmail.com">
+            <button type="submit"> Subscribirse</button>
+          </form>
+        </div>
+      </div>
+    </details>
     <!-- Pie de página -->
     <footer>
       <!-- Parte izquierda -->
@@ -156,23 +185,36 @@
       <ul class="iconosPie">
         <li class="enlacesIconosPie">
           <a
-            href="https://www.instagram.com/nestorespuch15/?hl=es" target="_blank"
-            ><img src="../img/Iconos/icono_Instagram.png" alt="Instagram" class="iconoPie"
+            href="https://www.instagram.com/nestorespuch15/?hl=es"
+            target="_blank"
+            ><img
+              src="../img/Iconos/icono_Instagram.png"
+              alt="Instagram"
+              class="iconoPie"
           /></a>
         </li>
         <li class="enlacesIconosPie">
           <a href="https://www.linkedin.com/in/nestorespuch/" target="_blank"
-            ><img src="../img/Iconos/icono_Linkdln.png" alt="LinkdIn" class="iconoPie"
+            ><img
+              src="../img/Iconos/icono_Linkdln.png"
+              alt="LinkdIn"
+              class="iconoPie"
           /></a>
         </li>
         <li class="enlacesIconosPie">
           <a href="https://twitter.com/nestorespuch15" target="_blank"
-            ><img src="../img/Iconos/icono_Twitter.png" alt="Twitter" class="iconoPie"
+            ><img
+              src="../img/Iconos/icono_Twitter.png"
+              alt="Twitter"
+              class="iconoPie"
           /></a>
         </li>
         <li class="enlacesIconosPie">
           <a href="https://github.com/NestorEspuch" target="_blank"
-            ><img src="../img/Iconos/icono_GitHub.png" alt="GitHUb" class="iconoPie"
+            ><img
+              src="../img/Iconos/icono_GitHub.png"
+              alt="GitHUb"
+              class="iconoPie"
           /></a>
         </li>
       </ul>
