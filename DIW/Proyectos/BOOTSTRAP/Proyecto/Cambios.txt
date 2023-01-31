@@ -1,0 +1,4 @@
+Lo añadido ha sido la nueva página de carrito, la página del login y del register, con sus correspondientes header y footer.
+En la página del login el enlace de 'He olvidado la contraseña es un formulario modal'.
+
+También he resubido la práctica por que queria actualizar los cambios hechos en el proyecto de sass.
