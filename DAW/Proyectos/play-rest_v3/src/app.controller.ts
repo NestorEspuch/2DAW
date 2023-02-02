@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Res } from '@nestjs/common';
+import { Body, Controller, Get, Post, Res } from '@nestjs/common';
 import { AppService } from './app.service';
 
 @Controller()
@@ -7,11 +7,25 @@ export class AppController {
 
   @Get()
   async index(@Res() res) {
-    return res.render('base');
+    return await this.appService
+      .listar()
+      .then((juegos) => {
+        return res.render('public/listado_juegos', { juegos: juegos });
+      })
+      .catch((e) => {
+        return res.render('public/error', { error: e });
+      });
   }
-  @Get('/buscar')
-  async listar(@Res() res, @Body() buscar: string) {
-    const resultado = await this.appService.listar(buscar);
-    if (resultado) return res.render('listado_juegos', { juegos: resultado });
+
+  @Post('/buscar')
+  async listar(@Res() res, @Body() buscar) {
+    return await this.appService
+      .listarBuscado(buscar.textoBusqueda)
+      .then((juegos) => {
+        return res.render('public/listado_juegos', { juegos: juegos });
+      })
+      .catch((e) => {
+        return res.render('public/error', { error: e });
+      });
   }
 }

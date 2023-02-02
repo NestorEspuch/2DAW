@@ -10,9 +10,7 @@ async function bootstrap() {
     autoescape: true,
     express: app,
   });
-  app.useStaticAssets(__dirname + '../public', { prefix: 'public' });
-  app.useStaticAssets(__dirname + '../node_modules/bootstrap/dist');
-  app.setViewEngine('njk');
+
   app.use(
     session({
       secret: '1234', // Clave para cifrar la sesión
@@ -21,6 +19,15 @@ async function bootstrap() {
       expires: new Date(Date.now() + 30 * 60 * 1000), // La sesión expirará en
     }),
   );
+
+  app.useStaticAssets(__dirname + '/../views', { prefix: 'public' });
+  app.useStaticAssets(__dirname + '/../node_modules/bootstrap/dist');
+  app.setViewEngine('njk');
+
+  app.use((req, res, next) => {
+    res.locals.session = req.session;
+    next();
+  });
 
   await app.listen(3000);
 }

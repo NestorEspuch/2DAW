@@ -4,13 +4,15 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { JuegoModule } from './juego/juego.module';
 import { JuegoSchema } from './juego/schemas/juego.schema';
+import { UsuarioSchema } from './usuario/schemas/usuario.schema';
 import { UsuarioModule } from './usuario/usuario.module';
 
 @Module({
   imports: [
     MongooseModule.forFeature([{ name: 'Juego', schema: JuegoSchema }]),
+    MongooseModule.forFeature([{ name: 'Auth', schema: UsuarioSchema }]),
     JuegoModule,
-    // UsuarioModule,
+    UsuarioModule,
     MongooseModule.forRoot('mongodb://localhost:27017/playRest_v3'),
   ],
   controllers: [AppController],

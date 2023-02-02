@@ -1,14 +1,19 @@
 import { Body, Controller, Get, Post, Req, Res } from '@nestjs/common';
-import { AppService } from 'src/app.service';
+import { UsuarioService } from './usuario.service';
 
 const usuarios = [
   { login: 'nestor', password: 'nestor' },
   { login: 'andres', password: 'andres' },
 ];
 
-@Controller('auth')
-export class AppController {
-  constructor(private readonly appServices: AppService) {}
+@Controller('Auth')
+export class AuthController {
+  constructor(private readonly usuarioServices: UsuarioService) {}
+
+  @Get()
+  async mostrar(@Res() res) {
+    return res.render('public/iniciarSesion');
+  }
 
   @Post('login')
   async login(@Res() res, @Req() req, @Body() body) {
@@ -16,14 +21,15 @@ export class AppController {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const pass = body.password;
     const existe = usuarios.filter(
-      (usuario) => usuario.login == usu && usuario,
+      (usuario) =>
+        usuario.login == usu && usuario && usuario.password == pass && usuario,
     );
 
     if (existe.length > 0) {
       req.session.usuario = existe[0].login;
-      res.listar();
+      res.redirect('/');
     } else {
-      res.render('iniciarSesion', {
+      res.render('public/iniciarSesion', {
         error: 'Error usuario o contraseña incorrecta',
       });
     }
@@ -31,6 +37,11 @@ export class AppController {
 
   @Get('logout')
   async cerrarSession(@Res() res, @Req() req) {
-    req.session.destroy();
+    try {
+      req.session.destroy();
+      res.redirect('/auth');
+    } catch (e) {
+      res.render('public/error', { error: 'Error en la aplicación: ' + e });
+    }
   }
 }

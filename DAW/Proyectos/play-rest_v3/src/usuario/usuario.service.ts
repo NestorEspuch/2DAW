@@ -7,7 +7,7 @@ import { UsuarioDto } from './dto/usuario-dto/usuario-dto';
 @Injectable()
 export class UsuarioService {
   constructor(
-    @InjectModel('Usuario')
+    @InjectModel('Auth')
     private readonly usuarioModel: Model<Usuario>,
   ) {}
 

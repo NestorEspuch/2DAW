@@ -18,8 +18,15 @@ export class JuegoService {
     return await this.juegoModel.findById(id).exec();
   }
 
-  async insertar(crearContactoDto: JuegoDto): Promise<Juego> {
-    const nuevoContacto = new this.juegoModel(crearContactoDto);
+  async listarBuscado(buscar: string) {
+    const arrayJuegos = this.juegoModel.find().exec();
+    return (await arrayJuegos).filter((juego) => {
+      return juego.nombre.includes(buscar);
+    });
+  }
+
+  async insertar(crearJuegoDto: JuegoDto): Promise<Juego> {
+    const nuevoContacto = new this.juegoModel(crearJuegoDto);
     return await nuevoContacto.save();
   }
 
