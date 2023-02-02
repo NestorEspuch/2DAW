@@ -1,18 +1,21 @@
 import {
   Body,
   Controller,
-  Delete,
+  // Delete,
   Get,
   Param,
   Post,
-  Put,
+  // Put,
   Res,
   Session,
+  // UploadedFile,
+  UseInterceptors,
 } from '@nestjs/common';
+import { FileInterceptor } from '@nestjs/platform-express/multer';
 import { JuegoDto } from './dto/juego-dto/juego-dto';
 import { JuegoService } from './juego.service';
 
-@Controller('Juego')
+@Controller('Juegos')
 export class JuegoController {
   constructor(private readonly juegoService: JuegoService) {}
 
@@ -79,20 +82,48 @@ export class JuegoController {
 
   // POST /juego
   @Post()
-  async crear(@Body() crearJuegoDTO: JuegoDto, @Res() res) {
+  @UseInterceptors(FileInterceptor('imagen'))
+  async crear(
+    @Body() crearJuegoDTO: JuegoDto,
+    @Res() res,
+    // @UploadedFile() imagen: Express.Multer.File,
+  ) {
     try {
-      return this.juegoService.insertar(crearJuegoDTO).then((juego) => {
-        res.render('public/juego_ficha', { juego: juego });
-      });
+      return this.juegoService
+        .insertar(crearJuegoDTO)
+        .then((juego) => {
+          res.render('public/juego_ficha', { juego: juego });
+        })
+        .catch((e) => {
+          return res.render('public/error', {
+            error: 'Error en la aplicación: ' + e,
+          });
+        });
     } catch (e) {
       return res.render('public/error', {
         error: 'Error en la aplicación: ' + e,
       });
     }
   }
+  // @UseInterceptors(FileInterceptor('imagen'))
+  // public async uploadFile(
+  //   @UploadedFile(
+  //     new ParseFilePipe({
+  //       validators: [new FileTypeValidator({ fileType: '.(png|jpeg|jpg)' })],
+  //     }),
+  //   )
+  //   imagen: Express.Multer.File,
+  // ) {
+  //   const response = {
+  //     originalname: imagen.originalname,
+  //     filename: imagen.filename,
+  //   };
+  //   console.log(response);
+  //   return response;
+  // }
 
   // PUT /juego/:id
-  @Put(':id')
+  @Post('editar/:id')
   async actualizar(
     @Param('id') id: string,
     @Body() actualizarJuego: JuegoDto,
@@ -104,10 +135,12 @@ export class JuegoController {
         id,
         actualizarJuego,
       );
+
       juegoEditar.imagen = juegoEditar.imagen
         ? juegoEditar.imagen
         : juego.imagen;
-      if (juego) return res.render('public/listado_juego', { juego: juego });
+
+      if (juego) return res.redirect('/');
       else {
         throw new Error();
       }
@@ -118,19 +151,39 @@ export class JuegoController {
     }
   }
 
+  // // DELETE /juego/:id
+  // @Delete(':id')
+  // async borrar(@Param('id') id: string, @Res() res) {
+  //   try {
+  //     await this.juegoService
+  //       .borrar(id)
+  //       .then(() => {
+  //         return res.render('public/listado_juego');
+  //       })
+  //       .catch((e) => {
+  //         return res.render('public/error', {
+  //           error: 'Error en la aplicación: ' + e,
+  //         });
+  //       });
+  //   } catch (e) {
+  //     return res.render('public/error', {
+  //       error: 'Error en la aplicación: ' + e,
+  //     });
+  //   }
+  // }
+
   // DELETE /juego/:id
-  @Delete(':id')
-  async borrar(@Param('id') id: string, @Res() res) {
-    try {
-      const borrado = await this.juegoService.borrar(id);
-      if (borrado) return res.render('public/listado_juego');
-      else {
-        throw new Error();
-      }
-    } catch (e) {
-      return res.render('public/error', {
-        error: 'Error en la aplicación: ' + e,
+  @Post('borrar/:id')
+  async borrarJuego(@Res() res, @Param('id') id: string, @Session() session) {
+    if (!session.usuario)
+      return res.render('public/iniciarSesion', {
+        error: 'El usuario debe estar logueado',
       });
+    try {
+      await this.juegoService.borrar(id);
+      return res.redirect('/');
+    } catch (e) {
+      res.render('public/error', { error: e });
     }
   }
 }

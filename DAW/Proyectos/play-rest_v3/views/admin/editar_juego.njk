@@ -1,9 +1,9 @@
 {% extends "../public/base.njk" %}
-{% block titulo %}Juego | Editar{% endblock %}
+{% block titulo %}Juegos | Editar{% endblock %}
 {% block contenido %}
     <h1>Editar juego: {{ juego.nombre }}</h1>
     {% if (juego) %}
-        <form action="/juego/editar/{{ juego.id }}" method="post">
+        <form action="/juegos/editar/{{ juego.id }}" method="post">
             <div class="form-group mb-3">
                 <label for="nombre">Nombre:</label>
                 <input type="text" class="form-control" name="nombre" placeholder="Nombre del contacto..." value="{{ juego.nombre }}"/>

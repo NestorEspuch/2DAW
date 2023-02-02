@@ -5,18 +5,18 @@
 {% block contenido %}
     <h1>Ficha juego</h1>
     <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="../../public/uploads/{{ juego.imagen }}" alt="{{ juego.imagen }}">
+        <img class="card-img-top" src="./public/uploads/{{ juego.imagen }}" alt="{{ juego.imagen }}">
         <div class="card-body">
             <h5 class="card-title">Nombre: {{ juego.nombre }}</h5>
             <p class="card-text">Descripción: {{ juego.descripcion }}</p>
             <p class="card-text">Precio: {{ juego.precio }}</p>
             <p class="card-text">Jugadores permitidos: {{ juego.jugadoresPermitido }}</p>
             {% if (session and session.usuario) %}
-                <form action="/juego/borrar/{{ juego.id }}" method="post">
+                <form action="/juegos/borrar/{{ juego.id }}" method="post">
                     <input type="hidden" name="_method" value="delete"/>
                     <button type="submit" class="btn btn-danger w-100">Borrar</button>
                 </form>
-                <a class="btn btn-primary w-100 mt-1" href="/juego/editar/{{ juego.id }}">Editar</a>
+                <a class="btn btn-primary w-100 mt-1" href="/juegos/editar/{{ juego.id }}">Editar</a>
             {% endif %}
         </div>
         <div class="card-footer">
