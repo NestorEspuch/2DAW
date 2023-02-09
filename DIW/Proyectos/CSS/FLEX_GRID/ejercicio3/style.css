@@ -34,11 +34,12 @@ body {
   order: 0;
   flex: 0 1 auto;
   align-self: auto;
+
+  text-align: center;
 }
 .parrafoArticulo {
   font-size: 3em;
   margin: 0;
-  margin-left: 2em;
   margin-top: 1em;
   font-weight: bold;
 }
@@ -75,7 +76,7 @@ body {
   text-align: right;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 880px) {
   #header {
     background-color: #2bfefe;
   }
@@ -125,7 +126,7 @@ body {
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 550px) {
   #header {
     background-color: #fdb284;
   }
